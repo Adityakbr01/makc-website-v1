@@ -1,0 +1,119 @@
+import { Link } from "react-router-dom";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { servicesData } from "@/data/servicesData";
+import { Instagram, Linkedin, Twitter } from "lucide-react";
+
+export default function Footer() {
+  const scrollRef = useScrollAnimation();
+
+  return (
+    <footer ref={scrollRef} className="bg-ma-black border-t border-ma-gray-9">
+      <div className="px-5 lg:px-10 py-16 lg:py-20">
+        {/* Top Row */}
+        <div
+          className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
+          data-scroll-animate="fade-in-up"
+        >
+          <Link to="/" className="block">
+            <span className="heading-display text-[12vw] md:text-[8vw] lg:text-[6vw] text-white leading-none tracking-[-0.02em]">
+              MAKC <span className="text-ma-yellow">AUTOMATIONS</span>
+            </span>
+          </Link>
+          <a
+            href="tel:+971551234567"
+            className="inline-flex items-center justify-center px-8 py-3 bg-ma-yellow text-black heading-display text-small-heading rounded-pill transition-all duration-300 hover:bg-white shrink-0"
+          >
+            CONTACT US
+          </a>
+        </div>
+
+        {/* Divider */}
+        <div className="h-px bg-ma-gray-8 my-10 lg:my-16" />
+
+        {/* Nav Links */}
+        <div
+          className="flex flex-wrap gap-x-8 gap-y-3"
+          data-scroll-animate="fade-in-up"
+          data-scroll-delay="0.1"
+        >
+          {servicesData.map((service) => (
+            <Link
+              key={service.slug}
+              to={service.slug}
+              className="heading-display text-small-heading text-white link-underline"
+            >
+              {service.title.replace("&", "\u0026")}
+            </Link>
+          ))}
+        </div>
+
+        {/* Contact Row */}
+        <div
+          className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mt-10 lg:mt-16"
+          data-scroll-animate="fade-in-up"
+          data-scroll-delay="0.2"
+        >
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+            <a
+              href="tel:+971551234567"
+              className="heading-display text-h6 text-white link-underline"
+            >
+              +971 55 123 4567
+            </a>
+            <a
+              href="mailto:info@makcautomations.com"
+              className="heading-display text-h6 text-white link-underline"
+            >
+              info@makcautomations.com
+            </a>
+          </div>
+          <div className="flex items-center gap-4">
+            <a
+              href="#"
+              className="text-white hover:opacity-70 transition-opacity duration-200"
+              aria-label="Instagram"
+            >
+              <Instagram size={28} />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:opacity-70 transition-opacity duration-200"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={28} />
+            </a>
+            <a
+              href="#"
+              className="text-white hover:opacity-70 transition-opacity duration-200"
+              aria-label="Twitter"
+            >
+              <Twitter size={28} />
+            </a>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="h-px bg-ma-gray-8 my-10 lg:my-16" />
+
+        {/* Bottom Row */}
+        <div
+          className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
+          data-scroll-animate="fade-in-up"
+          data-scroll-delay="0.3"
+        >
+          <p className="text-tiny text-ma-gray-5">
+            &copy; 2025 Makc Automations. All rights reserved.
+          </p>
+          <div className="flex gap-5">
+            <a href="#" className="text-tiny text-ma-gray-5 link-underline">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-tiny text-ma-gray-5 link-underline">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
