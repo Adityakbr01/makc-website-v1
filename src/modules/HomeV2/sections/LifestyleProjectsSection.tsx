@@ -135,7 +135,7 @@ export default function LifestyleProjectsSection() {
 
         {/* Explore Button */}
         <div className="flex justify-center mt-12">
-          <button className="flex items-center gap-2 border border-border-main text-text-main px-8 py-3.5 hover:bg-gold-primary hover:text-black transition-all duration-300 rounded-none uppercase text-[10px] sm:text-[11px] font-bold tracking-widest bg-transparent">
+          <button className="flex apple-border-shine rounded-full items-center gap-2 border border-border-main text-text-main px-8 py-3.5 hover:bg-gold-primary hover:text-black transition-all duration-300  uppercase text-[10px] sm:text-[11px] font-bold tracking-widest bg-transparent">
             Explore All Projects
             <ArrowRight className="h-4 w-4" />
           </button>

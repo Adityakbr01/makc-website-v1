@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Instagram, Linkedin, Facebook, Youtube, Phone, Mail, Sun, Moon } from "lucide-react";
+import {
+  Instagram,
+  Linkedin,
+  Facebook,
+  Youtube,
+  Phone,
+  Mail,
+  Sun,
+  Moon,
+} from "lucide-react";
 import OceanAnimation from "@/components/common/OceanAnimation";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
@@ -33,7 +42,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-5 font-sans text-xs text-text-muted leading-relaxed">
-              Crafting intelligent living experiences through innovative automation, seamless design, and world-class technology.
+              Crafting intelligent living experiences through innovative
+              automation, seamless design, and world-class technology.
             </p>
           </div>
 
@@ -44,32 +54,50 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3 font-sans text-xs text-text-muted">
               <li>
-                <a href="/#solutions" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#solutions"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Home Automation
                 </a>
               </li>
               <li>
-                <a href="/#solutions" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#solutions"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Lighting
                 </a>
               </li>
               <li>
-                <a href="/#solutions" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#solutions"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Security
                 </a>
               </li>
               <li>
-                <a href="/#solutions" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#solutions"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Networking
                 </a>
               </li>
               <li>
-                <a href="/#solutions" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#solutions"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Home Theatre
                 </a>
               </li>
               <li>
-                <a href="/#solutions" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#solutions"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Energy Management
                 </a>
               </li>
@@ -83,27 +111,42 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3 font-sans text-xs text-text-muted">
               <li>
-                <a href="/#projects" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#projects"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Luxury Villas
                 </a>
               </li>
               <li>
-                <a href="/#projects" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#projects"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Apartments
                 </a>
               </li>
               <li>
-                <a href="/#projects" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#projects"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Farmhouses
                 </a>
               </li>
               <li>
-                <a href="/#projects" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#projects"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Penthouses
                 </a>
               </li>
               <li>
-                <a href="/#projects" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#projects"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Commercial Spaces
                 </a>
               </li>
@@ -117,22 +160,34 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3 font-sans text-xs text-text-muted">
               <li>
-                <a href="/#about" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#about"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   About MAKC
                 </a>
               </li>
               <li>
-                <a href="/#process" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#process"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Our Process
                 </a>
               </li>
               <li>
-                <a href="/#careers" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#careers"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Careers
                 </a>
               </li>
               <li>
-                <a href="/#blog" className="hover:text-accent-blue transition-colors duration-200">
+                <a
+                  href="/#blog"
+                  className="hover:text-accent-blue transition-colors duration-200"
+                >
                   Blog
                 </a>
               </li>
@@ -174,11 +229,17 @@ export default function Footer() {
               Contact
             </h4>
             <div className="flex flex-col gap-4 font-sans text-xs text-text-muted">
-              <a href="tel:+919948432444" className="flex items-center gap-3 hover:text-accent-blue transition-colors duration-200">
+              <a
+                href="tel:+919948432444"
+                className="flex items-center gap-3 hover:text-accent-blue transition-colors duration-200"
+              >
                 <Phone className="h-4 w-4 shrink-0 text-accent-blue stroke-[1.5]" />
                 <span>+91 99484 32444</span>
               </a>
-              <a href="mailto:info@makcautomations.com" className="flex items-center gap-3 hover:text-accent-blue transition-colors duration-200">
+              <a
+                href="mailto:info@makcautomations.com"
+                className="flex items-center gap-3 hover:text-accent-blue transition-colors duration-200"
+              >
                 <Mail className="h-4 w-4 shrink-0 text-accent-blue stroke-[1.5]" />
                 <span className="break-all">info@makcautomations.com</span>
               </a>
@@ -187,7 +248,7 @@ export default function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-full border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
+                  className="w-8 h-8 rounded-full apple-border-shine border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-3.5 w-3.5 stroke-[1.5]" />
@@ -196,7 +257,7 @@ export default function Footer() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-full border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
+                  className="w-8 h-8 rounded-full apple-border-shine border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
                   aria-label="Facebook"
                 >
                   <Facebook className="h-3.5 w-3.5 stroke-[1.5]" />
@@ -205,7 +266,7 @@ export default function Footer() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-full border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
+                  className="w-8 h-8 rounded-full apple-border-shine border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-3.5 w-3.5 stroke-[1.5]" />
@@ -214,7 +275,7 @@ export default function Footer() {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-full border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
+                  className="w-8 h-8 apple-border-shine rounded-full border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
                   aria-label="YouTube"
                 >
                   <Youtube className="h-3.5 w-3.5 stroke-[1.5]" />
@@ -234,7 +295,8 @@ export default function Footer() {
           data-scroll-delay="0.1"
         >
           <p className="text-tiny text-text-muted">
-            &copy; {new Date().getFullYear()} Makc Automations. All rights reserved.
+            &copy; {new Date().getFullYear()} Makc Automations. All rights
+            reserved.
           </p>
           <div className="flex gap-5 items-center">
             {/* Theme Toggle Button */}
@@ -249,11 +311,19 @@ export default function Footer() {
                 <Moon className="h-4.5 w-4.5" />
               )}
             </button>
-            <span className="text-border-main/50 text-[10px] select-none">|</span>
-            <a href="/#privacy" className="text-tiny text-text-muted link-underline">
+            <span className="text-border-main/50 text-[10px] select-none">
+              |
+            </span>
+            <a
+              href="/#privacy"
+              className="text-tiny text-text-muted link-underline"
+            >
               Privacy Policy
             </a>
-            <a href="/#terms" className="text-tiny text-text-muted link-underline">
+            <a
+              href="/#terms"
+              className="text-tiny text-text-muted link-underline"
+            >
               Terms of Service
             </a>
           </div>

@@ -102,7 +102,7 @@ export default function ContactStrip({
 
           {/* Column 2: Call Us */}
           <div className="flex flex-col items-center justify-center text-center px-4 lg:py-2">
-            <div className="w-12 h-12 rounded-full border border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
+            <div className="w-12 h-12 rounded-full border apple-border-shine border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
               <Phone className="h-4.5 w-4.5 stroke-[1.5]" />
             </div>
             <h4 className="font-sans text-xs font-bold text-text-main tracking-wider uppercase">
@@ -111,7 +111,7 @@ export default function ContactStrip({
             {phone.href ? (
               <a
                 href={phone.href}
-                className="font-sans text-xs text-text-muted hover:text-accent-blue transition-colors duration-200 mt-1.5 font-medium"
+                className="font-sans text-xs  text-text-muted hover:text-accent-blue transition-colors duration-200 mt-1.5 font-medium"
               >
                 {phone.value}
               </a>
@@ -124,7 +124,7 @@ export default function ContactStrip({
 
           {/* Column 3: Email Us */}
           <div className="flex flex-col items-center justify-center text-center px-4 lg:py-2">
-            <div className="w-12 h-12 rounded-full border border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
+            <div className="w-12 h-12 apple-border-shine rounded-full border border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
               <Mail className="h-4.5 w-4.5 stroke-[1.5]" />
             </div>
             <h4 className="font-sans text-xs font-bold text-text-main tracking-wider uppercase">
@@ -146,7 +146,7 @@ export default function ContactStrip({
 
           {/* Column 4: Visit Us */}
           <div className="flex flex-col items-center justify-center text-center px-4 lg:py-2">
-            <div className="w-12 h-12 rounded-full border border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
+            <div className="w-12 h-12 rounded-full border apple-border-shine border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
               <MapPin className="h-4.5 w-4.5 stroke-[1.5]" />
             </div>
             <h4 className="font-sans text-xs font-bold text-text-main tracking-wider uppercase">
@@ -172,7 +172,7 @@ export default function ContactStrip({
           <div className="flex items-center justify-center md:col-span-2 lg:col-span-1 lg:pl-8 w-full">
             <a
               href={cta.href}
-              className="w-full max-w-[260px] py-3.5 px-5 sm:px-6 bg-accent-blue hover:bg-accent-blue/90 text-white rounded-xl transition-all duration-300 flex items-center justify-between gap-3 group cursor-pointer shadow-[0_4px_18_rgba(10,132,255,0.25)] hover:shadow-[0_6px_25px_rgba(10,132,255,0.35)] hover:scale-[1.01]"
+              className="w-full max-w-[260px] apple-border-shine rounded-full py-3.5 px-5 sm:px-6 bg-accent-blue hover:bg-accent-blue/90 text-white transition-all duration-300 flex items-center justify-between gap-3 group cursor-pointer shadow-[0_4px_18_rgba(10,132,255,0.25)] hover:shadow-[0_6px_25px_rgba(10,132,255,0.35)] hover:scale-[1]"
             >
               <span className="text-left font-sans text-xs font-bold tracking-wider leading-tight uppercase max-w-[120px] block text-white select-none">
                 {cta.label}

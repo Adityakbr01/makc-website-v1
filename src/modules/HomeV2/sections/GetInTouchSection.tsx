@@ -84,7 +84,7 @@ export default function GetInTouchSection() {
                     }`}
                   >
                     {/* Icon Circle */}
-                    <div className="w-12 h-12 rounded-full border border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue mb-4 shrink-0 transition-transform duration-300 hover:scale-110">
+                    <div className="w-12 h-12 apple-border-shine rounded-full b bg-accent-blue/5 flex items-center justify-center text-accent-blue mb-4 shrink-0 transition-transform duration-300 hover:scale-110">
                       <Icon className="h-5 w-5 stroke-[1.5]" />
                     </div>
 
@@ -110,7 +110,7 @@ export default function GetInTouchSection() {
               <div className="flex flex-col">
                 {/* Phone Item */}
                 <div className="flex items-center gap-4 border-b border-border-main/20 pb-4 mb-4 text-left">
-                  <div className="w-10 h-10 rounded-lg border border-border-main bg-bg-main/40 flex items-center justify-center text-accent-blue shrink-0">
+                  <div className="w-10 h-10 apple-border-shine rounded-full border border-border-main bg-bg-main/40 flex items-center justify-center text-accent-blue shrink-0">
                     <Phone className="h-4.5 w-4.5 stroke-[1.5]" />
                   </div>
                   <div className="flex flex-col">
@@ -128,7 +128,7 @@ export default function GetInTouchSection() {
 
                 {/* Email Item */}
                 <div className="flex items-center gap-4 border-b border-border-main/20 pb-4 mb-4 text-left">
-                  <div className="w-10 h-10 rounded-lg border border-border-main bg-bg-main/40 flex items-center justify-center text-accent-blue shrink-0">
+                  <div className="w-10 h-10 apple-border-shine rounded-full border border-border-main bg-bg-main/40 flex items-center justify-center text-accent-blue shrink-0">
                     <Mail className="h-4.5 w-4.5 stroke-[1.5]" />
                   </div>
                   <div className="flex flex-col">
@@ -146,7 +146,7 @@ export default function GetInTouchSection() {
 
                 {/* Website Item */}
                 <div className="flex items-center gap-4 border-b border-border-main/20 pb-4 mb-4 text-left">
-                  <div className="w-10 h-10 rounded-lg border border-border-main bg-bg-main/40 flex items-center justify-center text-accent-blue shrink-0">
+                  <div className="w-10 h-10 apple-border-shine rounded-full border border-border-main bg-bg-main/40 flex items-center justify-center text-accent-blue shrink-0">
                     <Globe className="h-4.5 w-4.5 stroke-[1.5]" />
                   </div>
                   <div className="flex flex-col">
@@ -166,7 +166,7 @@ export default function GetInTouchSection() {
 
                 {/* Address Item */}
                 <div className="flex items-center gap-4 text-left">
-                  <div className="w-10 h-10 rounded-lg border border-border-main bg-bg-main/40 flex items-center justify-center text-accent-blue shrink-0">
+                  <div className="w-10 h-10 apple-border-shine rounded-full border border-border-main bg-bg-main/40 flex items-center justify-center text-accent-blue shrink-0">
                     <MapPin className="h-4.5 w-4.5 stroke-[1.5]" />
                   </div>
                   <div className="flex flex-col">
@@ -184,7 +184,7 @@ export default function GetInTouchSection() {
               {/* Consultation CTA button */}
               <a
                 href="#contact"
-                className="w-full mt-8 py-4 bg-accent-blue hover:bg-accent-blue/90 text-white font-bold text-xs tracking-widest uppercase rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer shadow-[0_4px_15px_rgba(10,132,255,0.3)]"
+                className="w-full mt-8 py-4 apple-border-shine bg-accent-blue hover:bg-accent-blue/90 text-white font-bold text-xs tracking-widest uppercase rounded-full  transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer shadow-[0_4px_15px_rgba(10,132,255,0.3)]"
               >
                 <span>Schedule a Consultation</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

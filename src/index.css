@@ -34,10 +34,10 @@
   --color-card-foreground: hsl(var(--card-foreground));
 
   /* Custom brand colors — Accent Blue palette */
-  --color-gold-primary: #0A84FF;
-  --color-gold-hover: #3EA6FF;
-  --color-accent-blue: #0A84FF;
-  --color-glow-blue: #3EA6FF;
+  --color-gold-primary: #0a84ff;
+  --color-gold-hover: #3ea6ff;
+  --color-accent-blue: #0a84ff;
+  --color-glow-blue: #3ea6ff;
 
   /* Wired dynamic variables mapped to semantic names */
   --color-bg-main: var(--bg-main);
@@ -205,10 +205,10 @@
   .dark {
     --bg-main: #030712;
     --bg-surface: #081528;
-    --bg-card: #0B1629;
+    --bg-card: #0b1629;
     --text-main: #ffffff;
-    --text-muted: #A5B4C7;
-    --border-main: rgba(255,255,255,0.08);
+    --text-muted: #a5b4c7;
+    --border-main: rgba(255, 255, 255, 0.08);
 
     /* Base theme overrides for shadcn / component system */
     --background: 222 47% 4%;
@@ -253,19 +253,39 @@
       color: var(--text-main) !important;
     }
     .border-white\/5 {
-      border-color: color-mix(in srgb, var(--text-main) 5%, transparent) !important;
+      border-color: color-mix(
+        in srgb,
+        var(--text-main) 5%,
+        transparent
+      ) !important;
     }
     .border-white\/10 {
-      border-color: color-mix(in srgb, var(--text-main) 10%, transparent) !important;
+      border-color: color-mix(
+        in srgb,
+        var(--text-main) 10%,
+        transparent
+      ) !important;
     }
     .bg-white\/5 {
-      background-color: color-mix(in srgb, var(--text-main) 5%, transparent) !important;
+      background-color: color-mix(
+        in srgb,
+        var(--text-main) 5%,
+        transparent
+      ) !important;
     }
     .bg-white\/10 {
-      background-color: color-mix(in srgb, var(--text-main) 10%, transparent) !important;
+      background-color: color-mix(
+        in srgb,
+        var(--text-main) 10%,
+        transparent
+      ) !important;
     }
     .hover\:bg-white\/10:hover {
-      background-color: color-mix(in srgb, var(--text-main) 10%, transparent) !important;
+      background-color: color-mix(
+        in srgb,
+        var(--text-main) 10%,
+        transparent
+      ) !important;
     }
   }
 
@@ -423,4 +443,46 @@ html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+/* Apple-style border shine effect */
+.apple-border-shine {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.apple-border-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Stretches exactly to the edges of the parent */
+  border-radius: inherit;
+  /* Automatically matches the parent's rounded corners! */
+  padding: 1px;
+  /* This controls the thickness of your border */
+
+  /* The top-left and bottom-right shine colors */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.05) 75%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  /* Modern CSS Masking to cut out the inside, leaving ONLY the border */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  /* Ensures you can still click the button underneath the border */
+  pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover: smoothly reveal the border shine via opacity */
+.apple-border-shine:hover::after {
+  opacity: 1;
 }
