@@ -3,7 +3,7 @@ import ContactStrip from "@/components/common/ContactStrip";
 export default function CtaSection() {
   return (
     <section className="relative w-full bg-bg-main py-12 lg:py-16 border-t border-border-main">
-      <div className="relative mx-auto max-w-8xl px-4 sm:px-6">
+      <div className="relative mx-auto max-w-8xl px-4 sm:px-12">
         <ContactStrip
           title="Ready to Get Started?"
           description="Our team is ready to help you bring your smart living vision to life."

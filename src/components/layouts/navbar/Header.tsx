@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, X } from "lucide-react";
+import BrandLogo from "@/components/common/BrandLogo";
 
 export default function Header() {
   const location = useLocation();
@@ -130,13 +131,8 @@ export default function Header() {
         <div className="mx-auto flex max-w-8xl h-[64px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-16">
           {/* Logo Section */}
           <div className="flex items-center gap-3 shrink-0">
-            <Link to="/" className="flex flex-col group">
-              <div className="font-serif text-2xl lg:text-3xl font-extrabold tracking-[0.2em] text-text-main leading-none uppercase">
-                <span>MAKC</span>
-              </div>
-              <span className="text-[7.5px] font-bold tracking-[0.45em] text-gold-primary mt-1.5 uppercase leading-none pl-[2px]">
-                AUTOMATIONS
-              </span>
+            <Link to="/" className="flex items-center">
+              <BrandLogo className="h-10 w-auto" />
             </Link>
           </div>
 
@@ -240,9 +236,9 @@ export default function Header() {
               <Link
                 to="/"
                 onClick={() => setMenuOpen(false)}
-                className="font-serif text-lg font-extrabold tracking-[0.2em] text-text-main leading-none uppercase"
+                className="flex items-center"
               >
-                <span>MAKC</span>
+                <BrandLogo className="h-7 w-auto" />
               </Link>
               <button
                 onClick={() => setMenuOpen(false)}

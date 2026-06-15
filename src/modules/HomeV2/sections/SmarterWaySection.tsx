@@ -127,7 +127,7 @@ export default function SmarterWaySection() {
         <div className="absolute inset-0 bg-gradient-to-t from-bg-main via-transparent to-bg-main/30" />
       </div>
 
-      <div className="relative mx-auto max-w-8xl px-4 sm:px-6 z-10">
+      <div className="relative mx-auto max-w-8xl px-4 sm:px-12 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
           {/* Left Panel: Description and feature bullet grids (Spans 6/12) */}
           <div className="lg:col-span-6 flex flex-col text-left">
@@ -200,7 +200,7 @@ export default function SmarterWaySection() {
           {/* Right Panel: Interactive smart hub visualization (Spans 6/12) */}
           <div className="lg:col-span-6 w-full flex justify-center">
             {/* Visualizer Frame */}
-            <div className="relative w-full max-w-[500px] h-[450px] sm:h-[500px] rounded-2xl   overflow-hidden flex items-center justify-center">
+            <div className="relative w-full max-w-[700px] h-[450px] sm:h-[500px] rounded-2xl   overflow-hidden flex items-center justify-center">
               {/* Parallax View inside visualizer */}
               <div className="absolute inset-0 select-none pointer-events-none z-0">
                 {/* <img
@@ -260,7 +260,7 @@ export default function SmarterWaySection() {
                       key={node.id}
                       onMouseEnter={() => setActiveCategory(node.id)}
                       onMouseLeave={() => setActiveCategory(null)}
-                      className={`absolute flex items-center justify-center w-10 h-10 rounded-full border bg-bg-main/80 backdrop-blur-md transition-all duration-300 pointer-events-auto cursor-pointer ${
+                      className={`absolute flex items-center  justify-center w-10 h-10 rounded-full border bg-bg-main/80 backdrop-blur-md transition-all duration-300 pointer-events-auto cursor-pointer ${
                         isActive
                           ? "border-accent-blue text-accent-blue scale-110 shadow-[0_0_15px_rgba(10,132,255,0.4)]"
                           : "border-border-main text-text-muted hover:border-accent-blue/50 hover:text-text-main"
@@ -281,7 +281,7 @@ export default function SmarterWaySection() {
               {/* CSS Smartphone Mockup */}
               <div
                 className="absolute w-[180px] h-[330px] sm:w-[210px] sm:h-[395px] bg-[#090D16] border-[5px] border-[#222B3E] rounded-[32px] shadow-2xl overflow-hidden flex flex-col justify-between p-2.5 z-30 transition-all duration-500 hover:scale-[1.02]"
-                style={{ right: "8%", bottom: "8%" }}
+                style={{ right: "2%", bottom: "8%" }}
               >
                 {/* Phone Notch/Dynamic Island */}
                 <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-16 h-3.5 bg-black rounded-full z-40 flex items-center justify-center">

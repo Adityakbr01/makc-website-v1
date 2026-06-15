@@ -77,7 +77,7 @@ export default function ContactStrip({
   return (
     <div className={`relative w-full ${className}`}>
       {/* Premium Glassmorphic Outer Card container with glowing corners */}
-      <div className="relative w-full bg-bg-surface/20 dark:bg-[#070D19]/40 backdrop-blur-md border border-border-main/40 dark:border-accent-blue/10 rounded-2xl p-8 lg:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.12)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.4)] overflow-hidden">
+      <div className="relative w-full bg-bg-surface/20 dark:bg-[#070D19]/40 border border-border-main/40 dark:border-accent-blue/10 rounded-2xl p-8 lg:p-10  overflow-hidden">
         
         {/* Glow corner highlights for luxury sci-fi aesthetic */}
         <div className="absolute top-[-1px] left-[-1px] w-6 h-6 border-t-2 border-l-2 border-accent-blue/40 rounded-tl-2xl shadow-[0_-2px_10px_rgba(10,132,255,0.15)] pointer-events-none" />

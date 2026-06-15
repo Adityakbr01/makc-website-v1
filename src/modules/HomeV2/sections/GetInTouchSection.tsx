@@ -40,7 +40,7 @@ export default function GetInTouchSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-bg-main via-transparent to-bg-main/20" />
       </div>
 
-      <div className="relative mx-auto max-w-8xl px-4 sm:px-6 z-10">
+      <div className="relative mx-auto max-w-8xl px-4 sm:px-12 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Heading and feature grids (Spans 8/12) */}

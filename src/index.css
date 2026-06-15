@@ -486,3 +486,39 @@ html.lenis body {
 .apple-border-shine:hover::after {
   opacity: 1;
 }
+
+/* Home Wave CTA */
+.home-wave-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-wave-cta::before {
+  position: absolute;
+  inset: auto -18% -38%;
+  z-index: 0;
+  height: 170%;
+  content: "";
+  background: radial-gradient(
+    65% 80% at 50% 18%,
+    color-mix(in srgb, var(--cta-accent, var(--accent)) 90%, white 10%),
+    var(--cta-accent, var(--accent)) 68%,
+    color-mix(in srgb, var(--cta-accent, var(--accent)) 72%, black 28%)
+  );
+  border-radius: 45% 55% 0 0;
+  opacity: 0.95;
+  transform: translateY(80%) rotate(-2deg) scaleX(1.08);
+  transition:
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-radius 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-wave-cta:is(:hover, :focus-visible) {
+  border-color: var(--cta-accent, var(--accent)) !important;
+  color: var(--cta-foreground, var(--accent-foreground)) !important;
+}
+
+.home-wave-cta:is(:hover, :focus-visible)::before {
+  border-radius: 28% 72% 0 0;
+  transform: translateY(0) rotate(0deg) scaleX(1.2);
+}

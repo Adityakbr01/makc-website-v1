@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import BrandLogo from "@/components/common/BrandLogo";
 import {
   Instagram,
   Linkedin,
@@ -33,13 +34,8 @@ export default function Footer() {
         >
           {/* Column 1: Logo & Description */}
           <div className="flex flex-col text-left lg:pr-8 lg:pl-0">
-            <Link to="/" className="flex flex-col group">
-              <div className="font-serif text-2xl lg:text-3xl font-extrabold tracking-[0.2em] text-text-main leading-none uppercase">
-                <span>MAKC</span>
-              </div>
-              <span className="text-[7.5px] font-bold tracking-[0.45em] text-accent-blue mt-1.5 uppercase leading-none pl-[2px]">
-                AUTOMATIONS
-              </span>
+            <Link to="/" className="flex items-center">
+              <BrandLogo className="h-11 w-auto" />
             </Link>
             <p className="mt-5 font-sans text-xs text-text-muted leading-relaxed">
               Crafting intelligent living experiences through innovative

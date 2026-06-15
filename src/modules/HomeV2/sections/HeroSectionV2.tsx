@@ -1,5 +1,6 @@
 import React from "react";
 import { Lightbulb, Thermometer, ShieldCheck, Play } from "lucide-react";
+import WaveButton from "@/components/common/WaveButton";
 import heroBg from "../../../assets/images/home_v2/hero_bg.png";
 
 // Simple custom columns/curtains icon
@@ -107,15 +108,17 @@ export default function HeroSectionV2() {
             </a>
 
             {/* CTA 2: Outline */}
-            <a
+            <WaveButton
               href="#solutions"
-              className="px-6 py-3.5 sm:px-8 sm:py-4 border border-gold-primary text-gold-primary font-bold text-[10px] sm:text-xs tracking-[0.15em] uppercase hover:bg-gold-primary hover:text-black transition-all duration-300 rounded-none flex items-center gap-2 group"
+              accentColor="var(--color-gold-primary)"
+              foregroundColor="#000000"
+              className="px-6 py-3.5 sm:px-8 sm:py-4 border border-gold-primary text-gold-primary font-bold text-[10px] sm:text-xs tracking-[0.15em] uppercase transition-all duration-300 rounded-none flex items-center gap-2 group"
             >
               EXPLORE SMART HOMES
               <span className="font-mono text-xs transition-transform duration-300 group-hover:translate-x-1">
                 &gt;
               </span>
-            </a>
+            </WaveButton>
           </div>
         </div>
 
