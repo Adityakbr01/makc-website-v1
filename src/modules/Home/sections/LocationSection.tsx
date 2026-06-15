@@ -57,41 +57,41 @@ export default function LocationSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="contact" className="bg-ma-yellow section-padding scroll-mt-[120px]">
+    <section
+      ref={sectionRef}
+      id="contact"
+      className="bg-ma-yellow section-padding scroll-mt-[120px]"
+    >
       <div className="max-w-[1600px] mx-auto container-grid">
         {/* Left Column - Address */}
         <div className="col-span-12 lg:col-span-5 mb-8 lg:mb-0">
           <div className="location-left">
             <SectionLabel text="OUR LOCATION" variant="yellow" />
           </div>
-          <h2 className="location-left heading-display leading-[1.2] text-h2 text-ma-black mt-4 mb-8">
+          <h2 className="location-left heading-display leading-[1.2] text-h2 text-amber-100 mt-4 mb-8">
             VISIT OUR
             <br />
             <span className="text-white">HEADQUARTERS</span>
           </h2>
 
           <div className="location-left flex items-start gap-3 mb-6">
-            <Settings size={20} className="text-ma-black mt-1 shrink-0" />
+            <Settings size={20} className="mt-1 shrink-0" />
             <div>
-              <p className="text-body text-ma-black font-body">
-                Dubai Silicon Oasis
-              </p>
-              <p className="text-body text-ma-black font-body">
-                Dubai, United Arab Emirates
-              </p>
+              <p className="text-body font-body">Dubai Silicon Oasis</p>
+              <p className="text-body font-body">Dubai, United Arab Emirates</p>
             </div>
           </div>
 
           <a
             href="tel:+971551234567"
-            className="location-left block heading-display text-h6 text-ma-black link-underline mb-4"
+            className="location-left block heading-display text-h6 link-underline mb-4"
           >
             +971 55 123 4567
           </a>
 
           <a
             href="mailto:info@makcautomations.com"
-            className="location-left block heading-display text-h6 text-ma-black link-underline"
+            className="location-left block heading-display text-h6 link-underline"
           >
             info@makcautomations.com
           </a>

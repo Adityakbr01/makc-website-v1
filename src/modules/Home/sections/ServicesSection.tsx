@@ -111,7 +111,7 @@ export default function ServicesSection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-ma-black section-padding border-t border-white/5"
+      className="bg-ma-black section-paadding border-t border-white/5"
     >
       <div className="max-w-[1600px] mx-auto">
         <div className="text-center mb-12 lg:mb-20">
@@ -167,7 +167,7 @@ export default function ServicesSection() {
           })}
         </div>
 
-        <p className="text-center text-body-sm text-white/50 font-body mt-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-center text-body-sm text-white/50 font-body mt-12 max-w-4xl mx-auto leading-relaxed">
           Our commitment to excellence in home automation in Bangalore and Smart
           Home Automation sets us apart.
         </p>

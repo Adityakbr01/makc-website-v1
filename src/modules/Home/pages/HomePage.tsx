@@ -1,6 +1,7 @@
 import HeroSection from '@/modules/Home/sections/HeroSection';
 import ServicesSection from '@/modules/Home/sections/ServicesSection';
 import IndustriesSection from '@/modules/Home/sections/IndustriesSection';
+import OurVendorsSection from '@/modules/Home/sections/OurVendorsSection';
 import AboutSection from '@/modules/Home/sections/AboutSection';
 import WhyMAKcSection from '@/modules/Home/sections/WhyMAKcSection';
 import LocationSection from '@/modules/Home/sections/LocationSection';
@@ -35,6 +36,7 @@ export default function HomePage() {
       <HeroSection />
       <ServicesSection />
       <IndustriesSection />
+      <OurVendorsSection />
       <AboutSection />
       <WhyMAKcSection />
       <LocationSection />
