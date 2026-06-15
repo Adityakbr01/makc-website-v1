@@ -1,28 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, X, ChevronRight } from "lucide-react";
-
-// 3x3 dot grid icon matching the old header
-function GridIcon({ className = "h-5 w-5" }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-    >
-      <circle cx="6" cy="6" r="2" />
-      <circle cx="12" cy="6" r="2" />
-      <circle cx="18" cy="6" r="2" />
-      <circle cx="6" cy="12" r="2" />
-      <circle cx="12" cy="12" r="2" />
-      <circle cx="18" cy="12" r="2" />
-      <circle cx="6" cy="18" r="2" />
-      <circle cx="12" cy="18" r="2" />
-      <circle cx="18" cy="18" r="2" />
-    </svg>
-  );
-}
+import { Phone, X } from "lucide-react";
 
 export default function Header() {
   const location = useLocation();
@@ -30,26 +8,17 @@ export default function Header() {
   // Scroll & Menu States
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [showGridDropdown, setShowGridDropdown] = useState(false);
   const [activeHash, setActiveHash] = useState("#home");
 
-  const dropdownRef = useRef<HTMLDivElement>(null);
+
 
   const mainLinks = [
-    { label: "Home", path: "#home" },
-    { label: "Automation", path: "#automation" },
-    { label: "Security", path: "#security" },
-    { label: "Lighting", path: "#lighting" },
-    { label: "Networking", path: "#networking" },
-    { label: "Interior", path: "#interior" },
-    { label: "Contact Us", path: "#contact" },
-  ];
-
-  const gridDropdownLinks = [
+    { label: "Solutions", path: "#solutions" },
+    { label: "Projects", path: "#projects" },
+    { label: "Smart Villas", path: "#smart-villas" },
     { label: "About", path: "#about" },
-    { label: "Service", path: "#automation" },
-    { label: "Blog", path: "#faq" }, // Links to FAQs on the landing page
-    { label: "Experience", path: "#why-makc" }, // Links to why choose us section
+    { label: "Resources", path: "#resources" },
+    { label: "Contact", path: "#contact" },
   ];
 
   // Monitor scroll height for sticky background
@@ -97,22 +66,7 @@ export default function Header() {
   // Close menus on path navigation
   useEffect(() => {
     setMenuOpen(false);
-    setShowGridDropdown(false);
   }, [location.pathname]);
-
-  // Click outside grid dropdown closes it
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setShowGridDropdown(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   // Lock body scroll when mobile menu drawer is open
   useEffect(() => {
@@ -150,11 +104,9 @@ export default function Header() {
         scrollToSection(id);
         setActiveHash(path);
         setMenuOpen(false);
-        setShowGridDropdown(false);
       }
     } else {
       setMenuOpen(false);
-      setShowGridDropdown(false);
     }
   };
 
@@ -171,52 +123,23 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 w-full border-b border-medium-border bg-medium-surface/90 backdrop-blur-md transition-all duration-300 ${
-          isScrolled ? "py-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.05)]" : "py-3"
+        className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+          isScrolled
+            ? "py-3 bg-bg-surface/90 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+            : "py-3 border-b border-transparent bg-transparent"
         }`}
       >
         <div className="mx-auto flex max-w-7xl h-[64px] items-center justify-between gap-4 px-4 sm:px-6">
           {/* Logo Section */}
           <div className="flex items-center gap-3 shrink-0">
-            <Link to="/" className="flex items-center gap-2 group">
-              {/* Stylized Green Bulb SVG */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                className="h-8 w-8 text-green-500 transition-transform duration-300 group-hover:scale-110"
-              >
-                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
-                <path d="M9 18h6" />
-                <path d="M10 22h4" />
-                <circle cx="12" cy="8" r="1.5" className="fill-green-500" />
-                <path d="M12 9.5v5" />
-                <path d="M10.5 12h3" />
-              </svg>
-
-              <div className="flex flex-col">
-                <div className="font-display text-lg lg:text-xl font-bold tracking-wider text-medium-text-primary flex items-baseline leading-none">
-                  <span>MAK</span>
-                  <span className="text-ma-yellow">c</span>
-                  <span className="text-[8px] align-super text-ma-yellow ml-0.5 select-none">
-                    &reg;
-                  </span>
-                </div>
-                <span className="text-[6.5px] font-semibold tracking-wider text-medium-text-secondary mt-0.5 uppercase">
-                  Experience the Smart Living
-                </span>
+            <Link to="/" className="flex flex-col group">
+              <div className="font-serif text-2xl lg:text-3xl font-extrabold tracking-[0.2em] text-text-main leading-none uppercase">
+                <span>MAKC</span>
               </div>
+              <span className="text-[7.5px] font-bold tracking-[0.45em] text-gold-primary mt-1.5 uppercase leading-none pl-[2px]">
+                AUTOMATIONS
+              </span>
             </Link>
-
-            {/* ISO certified badge stamp */}
-            <div className="hidden md:flex items-center pl-3 border-l border-medium-border">
-              <div className="flex flex-col border border-medium-border-strong rounded-lg px-2 py-0.5 text-[7px] font-bold text-medium-text-secondary leading-tight uppercase text-center bg-medium-surface-muted">
-                <span>ISO Certified</span>
-                <span className="text-[6.5px] text-ma-yellow">9001:2015</span>
-              </div>
-            </div>
           </div>
 
           {/* Desktop Navigation Links */}
@@ -238,8 +161,8 @@ export default function Header() {
                   onClick={(e) => handleLinkClick(e, link.path)}
                   className={`px-3.5 py-1.5 text-sm font-semibold rounded-full transition-colors ${
                     isActive
-                      ? "text-ma-yellow bg-ma-yellow/5"
-                      : "text-medium-text-secondary hover:text-medium-text-primary hover:bg-medium-surface-hover"
+                      ? "text-gold-primary bg-gold-primary/5"
+                      : "text-text-muted hover:text-text-main hover:bg-bg-surface"
                   }`}
                 >
                   {link.label}
@@ -249,64 +172,24 @@ export default function Header() {
           </nav>
 
           {/* Desktop Right Side Action Buttons */}
-          <div className="flex items-center gap-2 shrink-0 relative">
-            {/* Phone button */}
+          <div className="flex items-center gap-3 shrink-0 relative">
+
+
+            {/* Book Consultation Button (Mockup styling) */}
             <a
-              href="tel:+919999999999"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-700 dark:bg-ma-yellow text-white dark:text-black transition-all hover:scale-105 active:scale-95 focus:outline-none shadow-[0_2px_8px_rgba(49,50,148,0.25)]"
-              title="Call Us"
+              href="#contact"
+              onClick={(e) => handleLinkClick(e, "#contact")}
+              className="hidden sm:flex items-center justify-center px-6 py-2.5 bg-gold-primary text-black font-bold text-xs tracking-[0.12em] uppercase transition-all duration-300 hover:bg-gold-hover font-body rounded-none shadow-[0_4px_15px_rgba(197,168,128,0.2)]"
             >
-              <Phone className="h-4 w-4" />
+              BOOK CONSULTATION{" "}
+              <span className="ml-2 font-mono font-medium">&gt;</span>
             </a>
-
-            {/* Grid Icon dropdown menu trigger */}
-            <div ref={dropdownRef} className="relative hidden lg:block">
-              <button
-                onClick={() => setShowGridDropdown(!showGridDropdown)}
-                className={`flex h-9 w-9 items-center justify-center rounded-full text-medium-text-secondary transition-all hover:bg-medium-surface-hover hover:text-medium-text-primary focus:outline-none ${
-                  showGridDropdown
-                    ? "bg-medium-surface-hover text-medium-text-primary"
-                    : ""
-                }`}
-                aria-label="More navigation"
-                title="Explore More"
-              >
-                <GridIcon className="h-4.5 w-4.5" />
-              </button>
-
-              {/* Grid Dropdown Panel */}
-              {showGridDropdown && (
-                <div className="absolute right-0 top-11 z-50 w-[180px] overflow-hidden rounded-2xl border border-medium-border bg-medium-surface p-1.5 shadow-2xl transition-all">
-                  {gridDropdownLinks.map((link) => {
-                    const isHash = link.path.startsWith("#");
-                    const href = isHash
-                      ? location.pathname === "/"
-                        ? link.path
-                        : `/${link.path}`
-                      : link.path;
-                    return (
-                      <Link
-                        key={link.label}
-                        to={href}
-                        onClick={(e) => handleLinkClick(e, link.path)}
-                        className="flex items-center justify-between rounded-xl px-4 py-2.5 text-xs font-semibold text-medium-text-secondary transition-colors hover:bg-medium-surface-hover hover:text-medium-text-primary"
-                      >
-                        <span>{link.label}</span>
-                        <ChevronRight className="h-3.5 w-3.5 opacity-60" />
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
 
             {/* Mobile Hamburger menu trigger */}
             <button
               onClick={() => setMenuOpen(!isMenuOpen)}
-              className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-medium-text-secondary transition-all hover:bg-medium-surface-hover hover:text-medium-text-primary focus:outline-none lg:hidden ${
-                isMenuOpen
-                  ? "bg-medium-surface-hover text-medium-text-primary"
-                  : ""
+              className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-text-muted transition-all hover:bg-bg-surface hover:text-text-main focus:outline-none lg:hidden ${
+                isMenuOpen ? "bg-bg-surface text-text-main" : ""
               }`}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
@@ -352,23 +235,22 @@ export default function Header() {
 
         {/* Drawer slide-out panel */}
         <div
-          className={`absolute right-0 top-0 bottom-0 z-50 w-[300px] max-w-[80vw] bg-medium-surface p-6 shadow-2xl transition-transform duration-300 ease-out border-l border-medium-border flex flex-col justify-between ${
+          className={`absolute right-0 top-0 bottom-0 z-50 w-[300px] max-w-[80vw] bg-bg-surface p-6 shadow-2xl transition-transform duration-300 ease-out border-l border-border-main flex flex-col justify-between ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div>
-            <div className="flex items-center justify-between pb-5 border-b border-medium-border">
+            <div className="flex items-center justify-between pb-5 border-b border-border-main">
               <Link
                 to="/"
                 onClick={() => setMenuOpen(false)}
-                className="font-display text-base font-bold tracking-wider text-medium-text-primary"
+                className="font-serif text-lg font-extrabold tracking-[0.2em] text-text-main leading-none uppercase"
               >
-                <span>MAK</span>
-                <span className="text-ma-yellow">c</span>
+                <span>MAKC</span>
               </Link>
               <button
                 onClick={() => setMenuOpen(false)}
-                className="flex h-8 w-8 items-center justify-center rounded-full text-medium-text-secondary transition-colors hover:bg-medium-surface-hover hover:text-medium-text-primary"
+                className="flex h-8 w-8 items-center justify-center rounded-full text-text-muted transition-colors hover:bg-bg-surface hover:text-text-main"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -392,40 +274,13 @@ export default function Header() {
                     onClick={(e) => handleLinkClick(e, link.path)}
                     className={`flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all ${
                       isActive
-                        ? "text-ma-yellow bg-ma-yellow/5"
-                        : "text-medium-text-secondary hover:bg-medium-surface-hover hover:text-medium-text-primary"
+                        ? "text-gold-primary bg-gold-primary/5"
+                        : "text-text-muted hover:bg-bg-surface hover:text-text-main"
                     }`}
                   >
-                    <span className="text-ma-yellow text-xs font-mono">
+                    <span className="text-gold-primary text-xs font-mono">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
-                    {link.label}
-                  </Link>
-                );
-              })}
-
-              <div className="h-[1px] bg-medium-border my-3" />
-
-              <div className="px-4 pb-1 text-[10px] font-bold uppercase tracking-wider text-medium-text-secondary">
-                More Information
-              </div>
-
-              {/* Grid Menu Links */}
-              {gridDropdownLinks.map((link) => {
-                const isHash = link.path.startsWith("#");
-                const href = isHash
-                  ? location.pathname === "/"
-                    ? link.path
-                    : `/${link.path}`
-                  : link.path;
-                return (
-                  <Link
-                    key={link.label}
-                    to={href}
-                    onClick={(e) => handleLinkClick(e, link.path)}
-                    className="flex items-center gap-2 rounded-xl px-4 py-2 text-xs font-semibold text-medium-text-secondary transition-all hover:bg-medium-surface-hover hover:text-medium-text-primary"
-                  >
-                    <ChevronRight className="h-3.5 w-3.5 opacity-60" />
                     {link.label}
                   </Link>
                 );
@@ -434,10 +289,10 @@ export default function Header() {
           </div>
 
           {/* Drawer Footer Call Shortcut */}
-          <div className="mt-auto border-t border-medium-border pt-4">
+          <div className="mt-auto border-t border-border-main pt-4">
             <a
               href="tel:+919999999999"
-              className="flex h-11 w-full items-center justify-center gap-2 rounded-full bg-blue-700 dark:bg-ma-yellow text-sm font-bold text-white dark:text-black transition-all hover:bg-blue-800 dark:hover:bg-white"
+              className="flex h-11 w-full items-center justify-center gap-2 rounded-none bg-gold-primary text-sm font-bold text-black transition-all hover:bg-gold-hover hover:text-black shadow-[0_4px_15px_rgba(197,168,128,0.2)]"
             >
               <Phone className="h-4 w-4" />
               <span>CALL NOW</span>

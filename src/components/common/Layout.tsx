@@ -11,7 +11,7 @@ export default function Layout() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-ma-black">
+    <div className="min-h-screen bg-bg-main text-text-main transition-colors duration-300">
       <Header />
       <main>
         <Outlet />

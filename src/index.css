@@ -2,6 +2,9 @@
 
 @plugin "tailwindcss-animate";
 
+/* Enable class-based dark mode for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
@@ -30,33 +33,45 @@
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
 
-  --color-ma-black: #000000;
-  --color-ma-yellow: #313294;
-  --color-ma-darkgray: #1a1a1a;
-  --color-ma-white: #ffffff;
+  /* Custom brand colors and premium gold palette mapping */
+  --color-gold-primary: #c5a880;
+  --color-gold-hover: #e2cbb0;
 
-  --color-ma-gray-1: #f7f7f8;
-  --color-ma-gray-2: #f2f2f2;
-  --color-ma-gray-3: #e8e8e8;
-  --color-ma-gray-4: #cdcdcd;
-  --color-ma-gray-5: #a4a4a4;
-  --color-ma-gray-6: #7c7c7c;
-  --color-ma-gray-7: #545456;
-  --color-ma-gray-8: #343434;
-  --color-ma-gray-9: #222223;
+  /* Wired dynamic variables mapped to semantic names */
+  --color-bg-main: var(--bg-main);
+  --color-bg-surface: var(--bg-surface);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-border-main: var(--border-main);
 
-  /* Medium theme classes mapped for header components */
-  --color-medium-surface: hsl(var(--medium-surface));
-  --color-medium-surface-hover: hsl(var(--medium-surface-hover));
-  --color-medium-surface-muted: hsl(var(--medium-surface-muted));
-  --color-medium-border: hsl(var(--medium-border));
-  --color-medium-border-strong: hsl(var(--medium-border-strong));
-  --color-medium-text-primary: hsl(var(--medium-text-primary));
-  --color-medium-text-secondary: hsl(var(--medium-text-secondary));
-  --color-medium-action: hsl(var(--medium-action));
-  --color-medium-action-hover: hsl(var(--medium-action-hover));
-  --color-medium-action-foreground: hsl(var(--medium-action-foreground));
-  --color-medium-green: hsl(var(--medium-green));
+  /* Compatibility aliases for legacy v1 components */
+  --color-ma-black: var(--bg-main);
+  --color-ma-darkgray: var(--bg-surface);
+  --color-ma-white: var(--text-main);
+  --color-ma-yellow: var(--color-gold-primary);
+
+  --color-ma-gray-1: var(--text-muted);
+  --color-ma-gray-2: var(--text-muted);
+  --color-ma-gray-3: var(--text-muted);
+  --color-ma-gray-4: var(--text-muted);
+  --color-ma-gray-5: var(--text-muted);
+  --color-ma-gray-6: var(--text-muted);
+  --color-ma-gray-7: var(--border-main);
+  --color-ma-gray-8: var(--border-main);
+  --color-ma-gray-9: var(--border-main);
+
+  /* Compatibility aliases for legacy medium components */
+  --color-medium-surface: var(--bg-surface);
+  --color-medium-surface-hover: var(--bg-main);
+  --color-medium-surface-muted: var(--bg-main);
+  --color-medium-border: var(--border-main);
+  --color-medium-border-strong: var(--border-main);
+  --color-medium-text-primary: var(--text-main);
+  --color-medium-text-secondary: var(--text-muted);
+  --color-medium-action: var(--color-gold-primary);
+  --color-medium-action-hover: var(--color-gold-hover);
+  --color-medium-action-foreground: #000000;
+  --color-medium-green: #22c55e;
 
   --font-display: "Orbitron", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -151,71 +166,102 @@
 }
 
 @layer base {
+  /* Light Mode Defaults */
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 239 50% 39%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 64%;
-    --accent: 239 50% 39%;
-    --accent-foreground: 0 0% 100%;
+    --bg-main: #fafafa;
+    --bg-surface: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
+    --border-main: #e5e5e5;
+
+    /* Base theme colors for shadcn / component system */
+    --background: 40 20% 96%;
+    --foreground: 36 12% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 36 12% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 36 12% 12%;
+    --primary: 36 40% 64%;
+    --primary-foreground: 36 20% 8%;
+    --secondary: 40 15% 92%;
+    --secondary-foreground: 36 12% 12%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 36 8% 45%;
+    --accent: 36 40% 64%;
+    --accent-foreground: 36 20% 8%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 13%;
-    --input: 0 0% 13%;
-    --ring: 239 50% 39%;
+    --border: 36 12% 87%;
+    --input: 36 12% 87%;
+    --ring: 36 40% 64%;
     --radius: 0.625rem;
-
-    /* Medium UI theme variables in Dark mode */
-    --medium-surface: 0 0% 8%;
-    --medium-surface-hover: 0 0% 14%;
-    --medium-surface-muted: 0 0% 5%;
-    --medium-border: 0 0% 13%;
-    --medium-border-strong: 0 0% 25%;
-    --medium-text-primary: 0 0% 100%;
-    --medium-text-secondary: 0 0% 65%;
-    --medium-action: 239 50% 39%;
-    --medium-action-hover: 239 50% 50%;
-    --medium-action-foreground: 0 0% 100%;
-    --medium-green: 142 70% 45%;
   }
 
-  .light {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
-    --primary: 239 50% 39%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
-    --ring: 239 50% 39%;
+  /* Dark Mode Overrides */
+  .dark {
+    --bg-main: #0d0d0d;
+    --bg-surface: #161616;
+    --text-main: #ffffff;
+    --text-muted: #a3a3a3;
+    --border-main: #262626;
 
-    /* Medium UI theme variables in Light mode */
-    --medium-surface: 0 0% 100%;
-    --medium-surface-hover: 0 0% 95%;
-    --medium-surface-muted: 0 0% 97%;
-    --medium-border: 0 0% 88%;
-    --medium-border-strong: 0 0% 75%;
-    --medium-text-primary: 0 0% 9%;
-    --medium-text-secondary: 0 0% 45%;
-    --medium-action: 239 50% 39%;
-    --medium-action-hover: 239 50% 30%;
-    --medium-action-foreground: 0 0% 100%;
-    --medium-green: 142 70% 40%;
+    /* Base theme overrides for shadcn / component system */
+    --background: 30 8% 7%;
+    --foreground: 30 10% 96%;
+    --card: 30 8% 11%;
+    --card-foreground: 30 10% 96%;
+    --popover: 30 8% 11%;
+    --popover-foreground: 30 10% 96%;
+    --primary: 36 40% 64%;
+    --primary-foreground: 36 20% 8%;
+    --secondary: 30 8% 11%;
+    --secondary-foreground: 30 10% 96%;
+    --muted: 30 6% 15%;
+    --muted-foreground: 30 5% 65%;
+    --accent: 36 40% 64%;
+    --accent-foreground: 36 20% 8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 6% 16%;
+    --input: 30 6% 16%;
+    --ring: 36 40% 64%;
+  }
+
+  /* Dynamic overrides to adapt legacy hardcoded white colors in light mode */
+  :root:not(.dark) {
+    .text-white {
+      color: var(--text-main) !important;
+    }
+    .text-white\/80 {
+      color: color-mix(in srgb, var(--text-main) 80%, transparent) !important;
+    }
+    .text-white\/65 {
+      color: color-mix(in srgb, var(--text-main) 65%, transparent) !important;
+    }
+    .text-white\/50 {
+      color: color-mix(in srgb, var(--text-main) 50%, transparent) !important;
+    }
+    .text-white\/95 {
+      color: color-mix(in srgb, var(--text-main) 95%, transparent) !important;
+    }
+    .hover\:text-white:hover {
+      color: var(--text-main) !important;
+    }
+    .border-white\/5 {
+      border-color: color-mix(in srgb, var(--text-main) 5%, transparent) !important;
+    }
+    .border-white\/10 {
+      border-color: color-mix(in srgb, var(--text-main) 10%, transparent) !important;
+    }
+    .bg-white\/5 {
+      background-color: color-mix(in srgb, var(--text-main) 5%, transparent) !important;
+    }
+    .bg-white\/10 {
+      background-color: color-mix(in srgb, var(--text-main) 10%, transparent) !important;
+    }
+    .hover\:bg-white\/10:hover {
+      background-color: color-mix(in srgb, var(--text-main) 10%, transparent) !important;
+    }
   }
 
   html {
@@ -225,17 +271,17 @@
   }
 
   body {
-    @apply bg-ma-black text-white font-body;
+    @apply bg-bg-main text-text-main font-body transition-colors duration-300;
     overflow-x: hidden;
   }
 
   * {
-    @apply border-ma-gray-8;
+    @apply border-border-main;
   }
 
   ::selection {
-    background-color: #313294;
-    color: #ffffff;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
   }
 }
 
@@ -270,7 +316,7 @@
 }
 
 @utility section-padding {
-  @apply py-[10vw] lg:py-[8.33vw] px-5 lg:px-10;
+  @apply py-[10vw] lg:py-[8.33vw] px-5;
 }
 
 @utility container-grid {
