@@ -1,4 +1,5 @@
 import HeroSection from '@/modules/Home/sections/HeroSection';
+import ServicesSection from '@/modules/Home/sections/ServicesSection';
 import IndustriesSection from '@/modules/Home/sections/IndustriesSection';
 import AboutSection from '@/modules/Home/sections/AboutSection';
 import WhyMAKcSection from '@/modules/Home/sections/WhyMAKcSection';
@@ -32,6 +33,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <ServicesSection />
       <IndustriesSection />
       <AboutSection />
       <WhyMAKcSection />

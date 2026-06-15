@@ -253,7 +253,7 @@ export default function Header() {
             {/* Phone button */}
             <a
               href="tel:+919999999999"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-700 dark:bg-ma-yellow text-white dark:text-black transition-all hover:scale-105 active:scale-95 focus:outline-none shadow-[0_2px_8px_rgba(235,225,22,0.15)]"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-700 dark:bg-ma-yellow text-white dark:text-black transition-all hover:scale-105 active:scale-95 focus:outline-none shadow-[0_2px_8px_rgba(49,50,148,0.25)]"
               title="Call Us"
             >
               <Phone className="h-4 w-4" />

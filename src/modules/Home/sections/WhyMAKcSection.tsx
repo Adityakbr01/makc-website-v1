@@ -51,22 +51,22 @@ const LoyalCustomerIcon = () => (
     {/* Yellow stars above profiles */}
     <path
       d="M32.5 8L34 11.5L37.5 11.5L34.5 13.5L35.5 17L32.5 15L29.5 17L30.5 13.5L27.5 11.5L31 11.5L32.5 8Z"
-      fill="#EBE116"
-      stroke="#EBE116"
+      fill="#313294"
+      stroke="#313294"
       strokeWidth="0.5"
       strokeLinejoin="round"
     />
     <path
       d="M20.5 7L21.5 9.5L24 9.5L22 11L22.5 13.5L20.5 12L18.5 13.5L19 11L17 9.5L19.5 9.5L20.5 7Z"
-      fill="#EBE116"
-      stroke="#EBE116"
+      fill="#313294"
+      stroke="#313294"
       strokeWidth="0.5"
       strokeLinejoin="round"
     />
     <path
       d="M44.5 7L45.5 9.5L48 9.5L46 11L46.5 13.5L44.5 12L42.5 13.5L43 11L41 9.5L43.5 9.5L44.5 7Z"
-      fill="#EBE116"
-      stroke="#EBE116"
+      fill="#313294"
+      stroke="#313294"
       strokeWidth="0.5"
       strokeLinejoin="round"
     />
@@ -93,9 +93,9 @@ const WarrantyIcon = () => (
     />
     <path
       d="M24 29L32 25L40 29L32 33L24 29Z"
-      stroke="#EBE116"
+      stroke="#313294"
       strokeWidth="2"
-      fill="#EBE116"
+      fill="#313294"
       fillOpacity="0.2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -138,7 +138,7 @@ const AssureIcon = () => (
     {/* Accent Checkmark */}
     <path
       d="M26 21L30 25L38 16"
-      stroke="#EBE116"
+      stroke="#313294"
       strokeWidth="3.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -166,9 +166,9 @@ const ClientIcon = () => (
     {/* Heart in center (Yellow Accent) */}
     <path
       d="M32 40.5C32 40.5 27.5 37.5 27.5 33.5C27.5 31.2 29.2 29.5 31.5 29.5C32.8 29.5 32.8 30.5 32.8 30.5C32.8 30.5 32.8 29.5 34.2 29.5C36.5 29.5 38.2 31.2 38.2 33.5C38.2 37.5 32 40.5 32 40.5Z"
-      stroke="#EBE116"
+      stroke="#313294"
       strokeWidth="2"
-      fill="#EBE116"
+      fill="#313294"
       fillOpacity="0.15"
       strokeLinecap="round"
       strokeLinejoin="round"

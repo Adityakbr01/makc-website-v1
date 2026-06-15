@@ -71,7 +71,11 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="bg-ma-darkgray section-padding scroll-mt-[120px]">
+    <section
+      ref={sectionRef}
+      id="about"
+      className="bg-ma-darkgray section-padding scroll-mt-[120px]"
+    >
       <div className="max-w-[1600px] mx-auto container-grid">
         {/* Left Column - Sticky Heading */}
         <div className="col-span-12 lg:col-span-5 mb-10 lg:mb-0">
@@ -79,7 +83,7 @@ export default function AboutSection() {
             <div className="about-header">
               <SectionLabel text="ABOUT US" />
             </div>
-            <h2 className="about-header heading-display text-h2 text-white mt-4">
+            <h2 className="about-header heading-display leading-[1.2] text-h2 text-white mt-4">
               PRECISION IN EVERY
               <br />
               <span className="text-highlight">CONNECTION</span>
@@ -88,7 +92,7 @@ export default function AboutSection() {
         </div>
 
         {/* Right Column - Text Blocks */}
-        <div className="col-span-12 lg:col-start-7 lg:col-span-6 flex flex-col gap-12 lg:gap-16">
+        <div className="col-span-12 lg:col-start-7 lg:col-span-6 flex flex-col gap-12">
           {textBlocks.map((block, index) => (
             <div
               key={block.heading}

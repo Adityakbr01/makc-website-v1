@@ -21,7 +21,7 @@ export default function Footer() {
           </Link>
           <a
             href="tel:+971551234567"
-            className="inline-flex items-center justify-center px-8 py-3 bg-ma-yellow text-black heading-display text-small-heading rounded-pill transition-all duration-300 hover:bg-white shrink-0"
+            className="inline-flex items-center justify-center px-8 py-3 bg-ma-yellow text-white heading-display text-small-heading rounded-pill transition-all duration-300 hover:bg-white hover:text-black shrink-0"
           >
             CONTACT US
           </a>

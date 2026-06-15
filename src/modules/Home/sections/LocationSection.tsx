@@ -64,10 +64,10 @@ export default function LocationSection() {
           <div className="location-left">
             <SectionLabel text="OUR LOCATION" variant="yellow" />
           </div>
-          <h2 className="location-left heading-display text-h2 text-ma-black mt-4 mb-8">
+          <h2 className="location-left heading-display leading-[1.2] text-h2 text-ma-black mt-4 mb-8">
             VISIT OUR
             <br />
-            <span className="text-ma-darkgray">HEADQUARTERS</span>
+            <span className="text-white">HEADQUARTERS</span>
           </h2>
 
           <div className="location-left flex items-start gap-3 mb-6">
