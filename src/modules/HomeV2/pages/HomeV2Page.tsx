@@ -1,26 +1,42 @@
-
 import HeroSectionV2 from "../sections/HeroSectionV2";
 import StatsSectionV2 from "../sections/StatsSectionV2";
 import ServicesSectionV2 from "../sections/ServicesSectionV2";
+import WhyChooseUsSection from "../sections/WhyChooseUsSection";
+import LifestyleProjectsSection from "../sections/LifestyleProjectsSection";
+import PartnerLogosSection from "../sections/PartnerLogosSection";
+import ProcessSection from "../sections/ProcessSection";
+import TestimonialsSection from "../sections/TestimonialsSection";
+import CtaSection from "../sections/CtaSection";
 
 export default function HomeV2Page() {
   return (
     <div className="relative bg-bg-main min-h-screen text-text-main">
       {/* V2 Hero Section */}
       <HeroSectionV2 />
-      
+
       {/* V2 Stats Section */}
       <StatsSectionV2 />
-      
+
       {/* V2 Services Section */}
       <ServicesSectionV2 />
-      
-      {/* Empty space/placeholder for other sections under HomeV2 */}
-      <div className="py-20 text-center border-t border-border-main bg-bg-main">
-        <p className="font-serif text-sm tracking-widest text-text-muted/30 uppercase">
-          More Sections Coming Soon
-        </p>
-      </div>
+
+      {/* V2 Why Choose Us Section */}
+      <WhyChooseUsSection />
+
+      {/* V2 Lifestyle and Projects Section */}
+      <LifestyleProjectsSection />
+
+      {/* V2 Partner Logos Section */}
+      <PartnerLogosSection />
+
+      {/* V2 Process Section */}
+      <ProcessSection />
+
+      {/* V2 Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* V2 Call To Action Banner Section */}
+      <CtaSection />
     </div>
   );
 }

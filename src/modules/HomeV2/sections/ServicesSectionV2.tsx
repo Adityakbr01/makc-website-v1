@@ -1,4 +1,4 @@
-import { Leaf, Lightbulb, ShieldAlert, Tv, Wifi } from "lucide-react";
+import { Leaf, Sun, ShieldCheck, Monitor, Wifi } from "lucide-react";
 import React from "react";
 
 // Import images
@@ -37,15 +37,16 @@ export default function ServicesSectionV2() {
       bgImage: imgAutomation,
     },
     {
-      icon: Lightbulb,
+      icon: Sun,
       title: "Luxury Lighting",
       description: "Create moods with intelligent lighting scenes.",
       bgImage: imgLighting,
     },
     {
-      icon: ShieldAlert,
+      icon: ShieldCheck,
       title: "Advanced Security",
-      description: "AI-powered surveillance, smart locks and intrusion protection.",
+      description:
+        "AI-powered surveillance, smart locks and intrusion protection.",
       bgImage: imgSecurity,
     },
     {
@@ -55,7 +56,7 @@ export default function ServicesSectionV2() {
       bgImage: imgNetworking,
     },
     {
-      icon: Tv,
+      icon: Monitor,
       title: "Home Theatre",
       description: "Immersive entertainment engineered perfectly.",
       bgImage: imgTheatre,
@@ -69,43 +70,49 @@ export default function ServicesSectionV2() {
   ];
 
   return (
-    <section id="solutions" className="relative w-full bg-bg-main py-20 lg:py-28 border-t border-border-main">
+    <section
+      id="solutions"
+      className="relative w-full bg-bg-main py-20 lg:py-28 border-t border-border-main"
+    >
       <div className="mx-auto max-w-8xl px-4 sm:px-6">
-        
         {/* Main Grid Layout: Intro Card + 3x2 Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 border border-border-main">
-          
           {/* Left Column: Intro Section (Spans 4/12 cols) */}
           <div className="lg:col-span-4 flex flex-col justify-between p-8 sm:p-12 lg:p-14 bg-bg-main border-b lg:border-b-0 lg:border-r border-border-main text-left">
             <div className="flex flex-col">
-              <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-gold-primary uppercase">
+              <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-accent-blue uppercase">
                 EXPERIENCE SMART LIVING
               </span>
-              
+
               <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-extrabold text-text-main tracking-tight leading-tight">
                 The Future <br />
                 Doesn't Wait. <br />
-                <span className="font-serif italic font-normal text-gold-primary">
+                <span className="font-serif italic font-normal text-text-main">
                   Neither Should <br />
                   Your Home.
                 </span>
               </h2>
             </div>
-            
-            <p className="mt-8 lg:mt-0 font-body text-xs sm:text-sm text-text-muted leading-relaxed">
-              Every room should anticipate your needs. Walk in. Lights welcome you. Climate adjusts automatically. 
-              Music follows you. Security protects silently. Your home becomes intelligent without looking technological.
+
+            <p className="mt-8 lg:mt-0 font-sans text-xs sm:text-sm text-text-muted leading-relaxed">
+              Every room should anticipate your needs. <br />
+              Walk in. Lights welcome you. <br />
+              Climate adjusts automatically. <br />
+              Music follows you. <br />
+              Security protects silently. <br />
+              Your home becomes intelligent <br />
+              without looking technological.
             </p>
           </div>
-          
-          {/* Right Column: 6 Services Grid (Spans 8/12 cols) */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 bg-bg-main">
+
+          {/* Right Column: 6 Services Grid (Spans 8/12 cols with clean border gap) */}
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 bg-border-main gap-[1px]">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <div
                   key={index}
-                  className="relative group min-h-[260px] flex flex-col justify-start items-start p-6 sm:p-8 border-b border-r last:border-r-0 md:last:border-r border-border-main overflow-hidden cursor-pointer transition-all duration-300 hover:bg-bg-surface"
+                  className="relative group min-h-[260px] flex flex-col justify-start items-start p-6 sm:p-8 bg-bg-main overflow-hidden cursor-pointer transition-all duration-300 hover:bg-bg-surface"
                 >
                   {/* Card Background Image with Hover Zoom */}
                   <div className="absolute inset-0 z-0 group-hover:scale-105 transition-all duration-500">
@@ -115,22 +122,22 @@ export default function ServicesSectionV2() {
                       className="w-full h-full object-cover object-center filter transition-all duration-500"
                     />
                     {/* Shadow overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-bg-main via-bg-main/70 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-bg-main via-bg-main/80 to-transparent" />
                   </div>
-                  
-                  {/* Card Top: Icon (Larger, Gold by default) */}
+
+                  {/* Card Top: Icon (Accent Blue) */}
                   <div className="relative z-10 text-left">
-                    <div className="text-gold-primary group-hover:text-gold-hover transition-all duration-300 shrink-0 flex items-center justify-start w-12 h-12">
+                    <div className="text-accent-blue group-hover:text-accent-blue/80 transition-all duration-300 shrink-0 flex items-center justify-start w-12 h-12">
                       <Icon className="h-10 w-10 stroke-[1.25]" />
                     </div>
                   </div>
-                  
-                  {/* Card Body: Text info (Stacked right below icon, limited to 40% width on desktop) */}
-                  <div className="relative z-10 text-left mt-4 flex-1 flex flex-col justify-start w-full sm:max-w-[70%] md:max-w-[55%] lg:max-w-[40%]">
-                    <h3 className="font-serif text-lg font-extrabold text-text-main group-hover:text-gold-primary transition-colors duration-300 max-w-[160px]">
+
+                  {/* Card Body: Text info (Stacked right below icon) */}
+                  <div className="relative z-10 text-left mt-4 flex-1 flex flex-col justify-start w-full max-w-[210px]">
+                    <h3 className="font-sans text-lg font-bold text-text-main group-hover:text-accent-blue transition-colors duration-300 max-w-[160px]">
                       {service.title}
                     </h3>
-                    <p className="mt-3 font-body text-xs sm:text-[13px] text-text-muted leading-relaxed font-medium group-hover:text-text-main transition-colors duration-300">
+                    <p className="mt-3 font-sans text-xs sm:text-[13px] text-text-muted leading-relaxed font-normal group-hover:text-text-main transition-colors duration-300">
                       {service.description}
                     </p>
                   </div>
@@ -138,9 +145,7 @@ export default function ServicesSectionV2() {
               );
             })}
           </div>
-          
         </div>
-        
       </div>
     </section>
   );

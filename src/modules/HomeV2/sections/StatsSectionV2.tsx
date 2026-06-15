@@ -1,5 +1,4 @@
-
-import { Home, Award, Shield, MapPin } from "lucide-react";
+import { Home, Award, ShieldCheck, MapPin } from "lucide-react";
 
 export default function StatsSectionV2() {
   const stats = [
@@ -14,7 +13,7 @@ export default function StatsSectionV2() {
       label: "Years of Excellence",
     },
     {
-      icon: Shield,
+      icon: ShieldCheck,
       value: "5-Year",
       label: "Installation Warranty",
     },
@@ -37,16 +36,16 @@ export default function StatsSectionV2() {
                 className="flex items-center justify-center gap-4 px-4 md:px-6 lg:px-8 text-left group first:pl-0 last:pr-0"
               >
                 {/* Icon wrapper */}
-                <div className="h-8 w-8 shrink-0 rounded-none flex items-center justify-center text-gold-primary transition-all duration-300">
-                  <Icon className="h-full w-full" />
+                <div className="h-9 w-9 shrink-0 rounded-none flex items-center justify-center text-accent-blue transition-all duration-300">
+                  <Icon className="h-full w-full stroke-[1.5]" />
                 </div>
                 
                 {/* Text wrapper */}
                 <div className="flex flex-col">
-                  <span className="font-serif text-2xl lg:text-3xl font-extrabold text-text-main tracking-tight leading-none group-hover:text-gold-primary transition-colors duration-200">
+                  <span className="font-sans text-2xl lg:text-3xl font-extrabold text-text-main tracking-tight leading-none group-hover:text-accent-blue transition-colors duration-200">
                     {stat.value}
                   </span>
-                  <span className="font-body text-[10px] sm:text-xs text-text-muted tracking-wider font-medium mt-1.5 uppercase leading-snug">
+                  <span className="font-sans text-[11px] sm:text-xs text-text-muted tracking-wide font-medium mt-1.5 leading-snug">
                     {stat.label}
                   </span>
                 </div>
@@ -58,3 +57,5 @@ export default function StatsSectionV2() {
     </div>
   );
 }
+
+
