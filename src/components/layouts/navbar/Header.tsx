@@ -129,7 +129,7 @@ export default function Header() {
             : "py-3 border-b border-transparent bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl h-[64px] items-center justify-between gap-4 px-4 sm:px-6">
+        <div className="mx-auto flex max-w-8xl h-[64px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-16">
           {/* Logo Section */}
           <div className="flex items-center gap-3 shrink-0">
             <Link to="/" className="flex flex-col group">
