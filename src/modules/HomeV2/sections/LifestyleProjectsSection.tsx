@@ -63,7 +63,7 @@ export default function LifestyleProjectsSection() {
         
         {/* ================= LIFESTYLE MODES SUBSECTION ================= */}
         <div className="flex flex-col items-center">
-          <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-accent-blue uppercase">
+          <span className="font-bold tracking-[0.2em] text-accent-blue uppercase">
             MORE THAN AUTOMATION
           </span>
           <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-extrabold text-text-main tracking-tight leading-tight">
@@ -105,7 +105,7 @@ export default function LifestyleProjectsSection() {
 
         {/* ================= FEATURED PROJECTS SUBSECTION ================= */}
         <div className="flex flex-col items-center mt-20 lg:mt-24">
-          <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-accent-blue uppercase">
+          <span className="font-bold tracking-[0.2em] text-accent-blue uppercase">
             FEATURED PROJECTS
           </span>
         </div>

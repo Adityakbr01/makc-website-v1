@@ -74,10 +74,10 @@ export default function TestimonialsSection() {
         {/* Left Column: Stats & Text */}
         <div className="lg:col-span-5 flex flex-col justify-between p-8 sm:p-12 lg:p-14 text-left border-b lg:border-b-0 lg:border-r border-border-main relative z-10 bg-bg-surface/50 dark:bg-[#030914] transition-colors duration-300">
           <div className="flex flex-col">
-            <span className="font-sans text-[11px] font-bold tracking-[0.25em] text-[#0A84FF] uppercase leading-none">
+            <span className=" text-[11px] font-bold tracking-[0.25em] text-[#0A84FF] uppercase leading-none">
               12.
             </span>
-            <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-[#0A84FF] uppercase mt-2.5">
+            <span className=" text-[10px] font-bold tracking-[0.2em] text-[#0A84FF] uppercase mt-2.5">
               CLIENT SUCCESS STORIES
             </span>
             {/* Elegant glowing horizontal line */}
@@ -102,13 +102,13 @@ export default function TestimonialsSection() {
                     <Icon className="h-5.5 w-5.5 stroke-[1.5]" />
                   </div>
                   
-                  <span className="font-sans text-xl sm:text-2xl font-black text-text-main mt-3 leading-none">
+                  <span className=" text-xl sm:text-2xl font-black text-text-main mt-3 leading-none">
                     {item.value}
                   </span>
-                  <span className="font-sans text-[9px] font-bold tracking-wider text-text-main uppercase mt-1.5 leading-none">
+                  <span className=" text-[9px] font-bold tracking-wider text-text-main uppercase mt-1.5 leading-none">
                     {item.label}
                   </span>
-                  <span className="font-sans text-[10px] sm:text-[11px] text-text-muted mt-1.5 leading-snug">
+                  <span className=" text-[10px] sm:text-[11px] text-text-muted mt-1.5 leading-snug">
                     {item.description}
                   </span>
                 </div>
@@ -141,15 +141,15 @@ export default function TestimonialsSection() {
               
               {/* Quote text & Client info */}
               <div className="sm:col-span-8 flex flex-col justify-between h-full pt-4 text-left">
-                <p className="font-sans text-xs sm:text-sm text-text-main leading-relaxed font-medium">
+                <p className=" text-xs sm:text-sm text-text-main leading-relaxed font-medium">
                   {testimonials[current].text}
                 </p>
                 
                 <div className="mt-4 flex flex-col">
-                  <span className="font-sans text-xs sm:text-sm font-bold text-[#0A84FF]">
+                  <span className=" text-xs sm:text-sm font-bold text-[#0A84FF]">
                     {testimonials[current].author}
                   </span>
-                  <span className="font-sans text-[10px] sm:text-xs text-text-muted mt-1 font-medium">
+                  <span className=" text-[10px] sm:text-xs text-text-muted mt-1 font-medium">
                     {testimonials[current].role}
                   </span>
                 </div>

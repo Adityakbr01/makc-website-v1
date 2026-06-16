@@ -115,7 +115,7 @@ export default function PartnerLogosSection() {
       <div className="mx-auto max-w-8xl px-4 sm:px-6 flex flex-col items-center">
         
         {/* Title */}
-        <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-accent-blue uppercase mb-8 select-none">
+        <span className="font-bold tracking-[0.2em] text-accent-blue uppercase mb-8 select-none">
           OUR TECHNOLOGY PARTNERS
         </span>
 

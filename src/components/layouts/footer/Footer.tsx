@@ -37,7 +37,7 @@ export default function Footer() {
             <Link to="/" className="flex items-center">
               <BrandLogo className="h-11 w-auto" />
             </Link>
-            <p className="mt-5 font-sans text-xs text-text-muted leading-relaxed">
+            <p className="mt-5  text-xs text-text-muted leading-relaxed">
               Crafting intelligent living experiences through innovative
               automation, seamless design, and world-class technology.
             </p>
@@ -45,10 +45,10 @@ export default function Footer() {
 
           {/* Column 2: Solutions */}
           <div className="flex flex-col text-left lg:px-6">
-            <h4 className="font-sans text-[11px] font-bold tracking-[0.25em] text-text-main uppercase mb-6 select-none">
+            <h4 className=" text-[11px] font-bold tracking-[0.25em] text-accent-blue uppercase mb-6 select-none">
               Solutions
             </h4>
-            <ul className="flex flex-col gap-3 font-sans text-xs text-text-muted">
+            <ul className="flex flex-col gap-3  text-xs text-text-muted">
               <li>
                 <a
                   href="/#solutions"
@@ -102,10 +102,10 @@ export default function Footer() {
 
           {/* Column 3: Projects */}
           <div className="flex flex-col text-left lg:px-6">
-            <h4 className="font-sans text-[11px] font-bold tracking-[0.25em] text-text-main uppercase mb-6 select-none">
+            <h4 className=" text-[11px] font-bold tracking-[0.25em] text-accent-blue uppercase mb-6 select-none">
               Projects
             </h4>
-            <ul className="flex flex-col gap-3 font-sans text-xs text-text-muted">
+            <ul className="flex flex-col gap-3  text-xs text-text-muted">
               <li>
                 <a
                   href="/#projects"
@@ -151,10 +151,10 @@ export default function Footer() {
 
           {/* Column 4: About */}
           <div className="flex flex-col text-left lg:px-6">
-            <h4 className="font-sans text-[11px] font-bold tracking-[0.25em] text-text-main uppercase mb-6 select-none">
+            <h4 className=" text-[11px] font-bold tracking-[0.25em] text-accent-blue uppercase mb-6 select-none">
               About
             </h4>
-            <ul className="flex flex-col gap-3 font-sans text-xs text-text-muted">
+            <ul className="flex flex-col gap-3  text-xs text-text-muted">
               <li>
                 <a
                   href="/#about"
@@ -192,10 +192,10 @@ export default function Footer() {
 
           {/* Column 5: Locations */}
           <div className="flex flex-col text-left lg:px-6">
-            <h4 className="font-sans text-[11px] font-bold tracking-[0.25em] text-text-main uppercase mb-6 select-none">
+            <h4 className=" text-[11px] font-bold tracking-[0.25em] text-accent-blue uppercase mb-6 select-none">
               Locations
             </h4>
-            <ul className="flex flex-col gap-3 font-sans text-xs text-text-muted">
+            <ul className="flex flex-col gap-3  text-xs text-text-muted">
               <li>
                 <span className="hover:text-text-main transition-colors duration-200 cursor-default">
                   Hyderabad
@@ -221,10 +221,10 @@ export default function Footer() {
 
           {/* Column 6: Contact */}
           <div className="flex flex-col text-left lg:pl-6 lg:pr-0">
-            <h4 className="font-sans text-[11px] font-bold tracking-[0.25em] text-text-main uppercase mb-6 select-none">
+            <h4 className=" text-[11px] font-bold tracking-[0.25em] text-accent-blue uppercase mb-6 select-none">
               Contact
             </h4>
-            <div className="flex flex-col gap-4 font-sans text-xs text-text-muted">
+            <div className="flex flex-col gap-4  text-xs text-text-muted">
               <a
                 href="tel:+919948432444"
                 className="flex items-center gap-3 hover:text-accent-blue transition-colors duration-200"

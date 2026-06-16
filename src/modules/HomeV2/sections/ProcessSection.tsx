@@ -48,7 +48,7 @@ export default function ProcessSection() {
       <div className="relative mx-auto max-w-8xl px-4 sm:px-6 z-10">
         {/* Header */}
         <div className="mb-16 lg:mb-20">
-          <span className="font-sans text-[10px] font-bold tracking-[0.25em] text-accent-blue uppercase mb-4 block select-none">
+          <span className="text font-bold tracking-[0.25em] text-accent-blue uppercase mb-4 block select-none">
             OUR PROCESS
           </span>
           <h2 className="font-display text-3xl md:text-nowrap sm:text-4xl lg:text-5xl font-bold text-text-main leading-tight max-w-2xl mx-auto">

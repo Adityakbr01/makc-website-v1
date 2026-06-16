@@ -42,10 +42,10 @@ export default function ContactStrip({
             
             {/* Text details */}
             <div className="flex flex-col text-left">
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-text-main tracking-tight leading-tight">
+              <h3 className="text-xl sm:text-2xl font-bold text-text-main tracking-tight leading-tight">
                 {title}
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-text-muted mt-1.5 leading-relaxed max-w-xl">
+              <p className="text-xs sm:text-sm text-text-muted mt-1.5 leading-relaxed max-w-xl">
                 {description}
               </p>
             </div>
@@ -55,7 +55,7 @@ export default function ContactStrip({
           <div className="flex items-center justify-center shrink-0 w-full lg:w-auto mt-2 lg:mt-0">
             <a
               href={cta.href}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#0055ff] to-[#0A84FF] text-white font-sans font-bold text-xs sm:text-sm tracking-wider uppercase rounded-xl shadow-[0_4px_20px_rgba(10,132,255,0.45)] hover:shadow-[0_6px_25px_rgba(10,132,255,0.65)] hover:scale-[1.02] hover:border-[#0A84FF]/80 transition-all duration-300 flex items-center justify-center gap-3 group cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#0055ff] to-[#0A84FF] text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-xl shadow-[0_4px_20px_rgba(10,132,255,0.45)] hover:shadow-[0_6px_25px_rgba(10,132,255,0.65)] hover:scale-[1.02] hover:border-[#0A84FF]/80 transition-all duration-300 flex items-center justify-center gap-3 group cursor-pointer"
             >
               <span>{cta.label}</span>
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
