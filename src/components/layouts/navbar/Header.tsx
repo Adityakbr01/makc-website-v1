@@ -42,7 +42,6 @@ export default function Header() {
     { label: "Security", path: "#security" },
     { label: "Lighting", path: "#lighting" },
     { label: "Networking", path: "#networking" },
-    { label: "Interior", path: "#interior" },
     { label: "Contact Us", path: "#contact" },
   ];
 
@@ -73,7 +72,6 @@ export default function Header() {
         "security",
         "lighting",
         "networking",
-        "interior",
         "about",
         "why-makc",
         "faq",

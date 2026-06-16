@@ -74,9 +74,6 @@ export default function TestimonialsSection() {
         {/* Left Column: Stats & Text */}
         <div className="lg:col-span-5 flex flex-col justify-between p-8 sm:p-12 lg:p-14 text-left border-b lg:border-b-0 lg:border-r border-border-main relative z-10 bg-bg-surface/50 dark:bg-[#030914] transition-colors duration-300">
           <div className="flex flex-col">
-            <span className=" text-[11px] font-bold tracking-[0.25em] text-[#0A84FF] uppercase leading-none">
-              12.
-            </span>
             <span className=" text-[10px] font-bold tracking-[0.2em] text-[#0A84FF] uppercase mt-2.5">
               CLIENT SUCCESS STORIES
             </span>
