@@ -31,11 +31,16 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section id="about" className="relative w-full bg-bg-main py-10 lg:py-16 border-t border-border-main">
-      <div className="mx-auto max-w-8xl px-4 sm:px-6">
+    <section id="about" className="relative w-full py-10 lg:py-16 border-t border-border-main overflow-hidden">
+      {/* Gradient background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#F5F7FA] to-[#EBEFF5] dark:from-[#07152D] dark:via-[#051022] dark:to-[#01050E] transition-colors duration-300 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_40%,rgba(10,132,255,0.08)_0%,rgba(10,132,255,0.03)_35%,transparent_70%)] dark:bg-[radial-gradient(circle_at_80%_40%,rgba(32,120,255,0.32)_0%,rgba(12,65,190,0.18)_22%,rgba(6,25,60,0.08)_48%,transparent_72%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_80%,rgba(10,132,255,0.04),transparent_70%)] dark:bg-[radial-gradient(circle_at_30%_80%,rgba(0,70,255,0.08),transparent_70%)] pointer-events-none" />
+
+      <div className="relative mx-auto max-w-8xl px-4 sm:px-6 z-10">
         
         {/* Border container wrapping image and content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 border border-border-main">
+        <div className="grid grid-cols-1 lg:grid-cols-12 border border-border-main backdrop-blur-sm">
           
           {/* Left Column: Full height Image (Spans 5/12 cols) */}
           <div className="lg:col-span-5 relative min-h-[350px] lg:min-h-[520px] border-b lg:border-b-0 lg:border-r border-border-main overflow-hidden">
@@ -50,7 +55,7 @@ export default function WhyChooseUsSection() {
           </div>
 
           {/* Right Column: Dark content panel (Spans 7/12 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-between p-8 sm:p-12 lg:p-14 bg-bg-main text-left">
+          <div className="lg:col-span-7 flex flex-col justify-between p-8 sm:p-12 lg:p-14 bg-bg-main/40 dark:bg-bg-main/20 backdrop-blur-md text-left">
             
             {/* Top Text Content */}
             <div className="flex flex-col">

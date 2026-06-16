@@ -58,8 +58,13 @@ export default function LifestyleProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="relative w-full bg-bg-main py-20 lg:py-24 border-t border-border-main text-center">
-      <div className="mx-auto max-w-8xl px-4 sm:px-6">
+    <section id="projects" className="relative w-full py-20 lg:py-24 border-t border-border-main text-center overflow-hidden">
+      {/* Gradient background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#F5F7FA] to-[#EBEFF5] dark:from-[#07152D] dark:via-[#051022] dark:to-[#01050E] transition-colors duration-300 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(10,132,255,0.08)_0%,rgba(10,132,255,0.03)_35%,transparent_70%)] dark:bg-[radial-gradient(circle_at_15%_20%,rgba(32,120,255,0.32)_0%,rgba(12,65,190,0.18)_22%,rgba(6,25,60,0.08)_48%,transparent_72%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_75%,rgba(10,132,255,0.04),transparent_70%)] dark:bg-[radial-gradient(circle_at_85%_75%,rgba(0,70,255,0.08),transparent_70%)] pointer-events-none" />
+
+      <div className="relative mx-auto max-w-8xl px-4 sm:px-6 z-10">
         
         {/* ================= LIFESTYLE MODES SUBSECTION ================= */}
         <div className="flex flex-col items-center">

@@ -94,7 +94,7 @@ export default function SmarterWaySection() {
   const nodes = [
     { id: "lighting", icon: Lightbulb, label: "Lighting", x: 35, y: 15 },
     { id: "security", icon: Lock, label: "Security", x: 55, y: 22 },
-    { id: "cameras", icon: Video, label: "Cameras", x: 63, y: 45 },
+    { id: "cameras", icon: Video, label: "Cameras", x: 7, y: 45 },
     { id: "shades", icon: ShadesIcon, label: "Shades", x: 55, y: 68 },
     { id: "garage", icon: GarageIcon, label: "Garage", x: 35, y: 75 },
     { id: "music", icon: Music, label: "Audio", x: 15, y: 68 },
@@ -281,7 +281,7 @@ export default function SmarterWaySection() {
               {/* CSS Smartphone Mockup */}
               <div
                 className="absolute w-[180px] h-[330px] sm:w-[210px] sm:h-[395px] bg-[#090D16] border-[5px] border-[#222B3E] rounded-[32px] shadow-2xl overflow-hidden flex flex-col justify-between p-2.5 z-30 transition-all duration-500 hover:scale-[1.02]"
-                style={{ right: "2%", bottom: "8%" }}
+                style={{ right: "8%", bottom: "8%" }}
               >
                 {/* Phone Notch/Dynamic Island */}
                 <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-16 h-3.5 bg-black rounded-full z-40 flex items-center justify-center">

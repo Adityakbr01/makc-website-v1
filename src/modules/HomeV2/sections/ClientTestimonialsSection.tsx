@@ -21,8 +21,13 @@ export default function ClientTestimonialsSection() {
   ];
 
   return (
-    <section className="relative w-full bg-bg-main py-20 lg:py-24 border-t border-border-main text-center">
-      <div className="mx-auto max-w-8xl px-4 sm:px-6">
+    <section className="relative w-full py-20 lg:py-24 border-t border-border-main text-center overflow-hidden">
+      {/* Gradient background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#F5F7FA] to-[#EBEFF5] dark:from-[#07152D] dark:via-[#051022] dark:to-[#01050E] transition-colors duration-300 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(10,132,255,0.08)_0%,rgba(10,132,255,0.03)_35%,transparent_70%)] dark:bg-[radial-gradient(circle_at_30%_30%,rgba(32,120,255,0.32)_0%,rgba(12,65,190,0.18)_22%,rgba(6,25,60,0.08)_48%,transparent_72%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(10,132,255,0.04),transparent_70%)] dark:bg-[radial-gradient(circle_at_70%_70%,rgba(0,70,255,0.08),transparent_70%)] pointer-events-none" />
+
+      <div className="relative mx-auto max-w-8xl px-4 sm:px-6 z-10">
         
         {/* Title */}
         <span className="font-sans text-xl font-bold tracking-[0.2em] text-accent-blue uppercase mb-12 block select-none">
@@ -35,7 +40,7 @@ export default function ClientTestimonialsSection() {
             return (
               <div
                 key={index}
-                className="flex flex-col sm:flex-row border border-border-main bg-bg-main overflow-hidden rounded-xl h-auto sm:h-[220px] transition-all duration-300 hover:border-accent-blue/20"
+                className="flex flex-col sm:flex-row border border-border-main dark:border-[#0A84FF]/15 bg-white/60 dark:bg-[#061121]/50 backdrop-blur-xl overflow-hidden rounded-xl h-auto sm:h-[220px] transition-all duration-500 hover:border-accent-blue/40 hover:shadow-[0_0_25px_rgba(10,132,255,0.08)] dark:hover:shadow-[0_0_25px_rgba(10,132,255,0.15)]"
               >
                 {/* Left Side: Image (Spans ~38% width on tablet/desktop) */}
                 <div className="w-full sm:w-[38%] h-[160px] sm:h-full shrink-0 relative overflow-hidden">
@@ -47,7 +52,7 @@ export default function ClientTestimonialsSection() {
                 </div>
 
                 {/* Right Side: Content (Spans ~62% width) */}
-                <div className="w-full sm:w-[62%] p-6 flex flex-col justify-between bg-bg-main">
+                <div className="w-full sm:w-[62%] p-6 flex flex-col justify-between bg-transparent">
                   <div>
                     {/* Stars */}
                     <div className="flex items-center gap-1 text-[#0A84FF]">
