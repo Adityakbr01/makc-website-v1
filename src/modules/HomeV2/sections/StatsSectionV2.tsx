@@ -27,14 +27,18 @@ export default function StatsSectionV2() {
   return (
     <div className="relative w-full z-20 bg-bg-main border-y border-border-main py-8 md:py-12">
       <div className="mx-auto max-w-8xl px-4 sm:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y-0 divide-x-0 sm:grid-cols-2 sm:gap-y-10 md:divide-x md:divide-border-main">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 sm:grid-cols-2 sm:gap-y-10">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
               <div
                 key={index}
-                className="flex items-center justify-center gap-4 px-4 md:px-6 lg:px-8 text-left group first:pl-0 last:pr-0"
+                className="relative flex items-center justify-center gap-4 px-4 md:px-6 lg:px-8 text-left group"
               >
+                {/* Custom vertical gradient divider as border-right on desktop */}
+                {index < stats.length - 1 && (
+                  <div className="absolute right-0 top-0 bottom-0 w-[1.5px] bg-gradient-to-b from-[#0A84FF]/0 via-[#0A84FF]/40 to-[#0A84FF]/0 z-0 hidden md:block" />
+                )}
                 {/* Icon wrapper */}
                 <div className="h-11 w-11 shrink-0 rounded-none flex items-center justify-center text-accent-blue transition-all duration-300">
                   <Icon className="h-full w-full stroke-[1.5]" />

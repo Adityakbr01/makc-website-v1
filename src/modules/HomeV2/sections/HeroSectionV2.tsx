@@ -2,7 +2,7 @@ import React from "react";
 import WaveButton from "@/components/common/WaveButton";
 import heroBg from "../../../assets/images/home_v2/hero_bg.png";
 
-// Custom Incandescent Lightbulb Icon matching mockup details
+// Clean Lightbulb icon
 function LightbulbIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -15,26 +15,19 @@ function LightbulbIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      {/* Bulb body outline */}
-      <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5" />
-      {/* U-shaped filament inside */}
-      <path d="M10 13V10a2 2 0 0 1 4 0v3" />
-      {/* Base contact lines */}
       <path d="M9 18h6" />
-      <path d="M10 21h4" />
-      {/* Mockup-precise 7 light rays */}
-      <path d="M12 2v2" />
-      <path d="M4.9 4.9l1.4 1.4" />
-      <path d="M19.1 4.9l-1.4 1.4" />
-      <path d="M3 10h2" />
-      <path d="M21 10h-2" />
-      <path d="M4.9 15.1l1.4-1.4" />
-      <path d="M19.1 15.1l-1.4-1.4" />
+      <path d="M10 22h4" />
+      <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
+      <line x1="12" y1="5" x2="12" y2="7" />
+      <line x1="5.6" y1="8.6" x2="7" y2="10" />
+      <line x1="18.4" y1="8.6" x2="17" y2="10" />
+      <line x1="3" y1="12" x2="5" y2="12" />
+      <line x1="19" y1="12" x2="21" y2="12" />
     </svg>
   );
 }
 
-// Custom Thermometer with horizontal breeze/airflow rays on left/right
+// Clean Thermometer / Climate icon
 function ClimateIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -47,25 +40,20 @@ function ClimateIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      {/* Thermometer outer body */}
       <path d="M14 14.76V3.5a2 2 0 0 0-4 0v11.26a4.5 4.5 0 1 0 4 0z" />
-      {/* Vertical inner mercury indicator line */}
-      <path d="M12 7v5" />
-      {/* Inner mercury bulb filled */}
+      <line x1="12" y1="7" x2="12" y2="13" />
       <circle cx="12" cy="16.5" r="2" fill="currentColor" />
-      {/* Left side horizontal waves */}
-      <path d="M6 7.5c-1-.5-2 .5-3 0" />
-      <path d="M6 11c-1.2-.5-2.5.5-3.5 0" />
-      <path d="M6 14.5c-1-.5-2 .5-3 0" />
-      {/* Right side horizontal waves */}
-      <path d="M18 7.5c1-.5 2 .5 3 0" />
-      <path d="M18 11c1.2-.5 2.5.5 3.5 0" />
-      <path d="M18 14.5c1-.5 2 .5 3 0" />
+      <path d="M5 8h2" />
+      <path d="M5 12h3" />
+      <path d="M5 16h2" />
+      <path d="M17 8h2" />
+      <path d="M16 12h3" />
+      <path d="M17 16h2" />
     </svg>
   );
 }
 
-// Custom Tied-Back curtains with top rod finials
+// Clean Curtains icon
 function CurtainsIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -78,21 +66,16 @@ function CurtainsIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      {/* Rod */}
       <path d="M3 5h18" />
       <circle cx="2" cy="5" r="1" fill="currentColor" />
       <circle cx="22" cy="5" r="1" fill="currentColor" />
-      {/* Left Curtain tied back */}
-      <path d="M5 5v13c0 1 .5 1.5 1.5 1.5h3c.5 0 1-.5 1-1.5v-3.5c0-.8-.5-1.5-1-2-.5-.5-1-1.2-1-2V5H5z" />
-      <path d="M5 12h4.5" />
-      {/* Right Curtain tied back */}
-      <path d="M19 5v13c0 1-.5 1.5-1.5 1.5h-3c-.5 0-1-.5-1-1.5v-3.5c0-.8.5-1.5 1-2s1-1.2 1-2V5h3z" />
-      <path d="M14.5 12h4.5" />
+      <path d="M5 5c0 6 4 8 4 12a2 2 0 0 1-2 2H5V5z" />
+      <path d="M19 5c0 6-4 8-4 12a2 2 0 0 0 2 2h2V5z" />
     </svg>
   );
 }
 
-// Custom Shield with solid filled star inside
+// Clean Shield with star icon
 function SecurityStarIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -107,7 +90,7 @@ function SecurityStarIcon(props: React.SVGProps<SVGSVGElement>) {
     >
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       <polygon
-        points="12 7.5 13.5 10.5 16.8 10.5 14.2 12.5 15.2 15.8 12 14 8.8 15.8 9.8 12.5 7.2 10.5 10.5 10.5"
+        points="12,8 13.5,11 16.8,11.2 14.5,13.4 15.2,16.7 12,15 8.8,16.7 9.5,13.4 7.2,11.2 10.5,11"
         fill="currentColor"
         stroke="none"
       />
@@ -115,7 +98,7 @@ function SecurityStarIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-// Custom Theatre screen with solid filled Play button in center
+// Clean Theatre / TV screen icon
 function TheatreScreenIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -128,10 +111,10 @@ function TheatreScreenIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      <rect width="20" height="12" x="2" y="4" rx="2" />
-      <line x1="12" x2="12" y1="16" y2="20" />
-      <line x1="8" x2="16" y1="20" y2="20" />
-      <polygon points="10.5 7.5 15 10 10.5 12.5" fill="currentColor" stroke="none" />
+      <rect x="2" y="4" width="20" height="12" rx="2" />
+      <line x1="12" y1="16" x2="12" y2="20" />
+      <line x1="8" y1="20" x2="16" y2="20" />
+      <polygon points="10,8 10,12 14,10" fill="currentColor" stroke="none" />
     </svg>
   );
 }

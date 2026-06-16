@@ -71,15 +71,19 @@ export default function LifestyleProjectsSection() {
           </h2>
         </div>
 
-        {/* 5 Modes Row with Dividers */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 lg:gap-y-0 lg:divide-x lg:divide-border-main mt-12 lg:mt-16">
+        {/* 5 Modes Row with Custom Glowing Dividers */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 lg:gap-y-0 mt-12 lg:mt-16">
           {modes.map((mode, index) => {
             const Icon = mode.icon;
             return (
               <div
                 key={index}
-                className="flex flex-col items-center text-center px-4 first:pl-0 last:pr-0"
+                className="relative flex flex-col items-center text-center px-4"
               >
+                {/* Custom vertical gradient divider as border-right on desktop */}
+                {index < modes.length - 1 && (
+                  <div className="absolute right-0 top-0 bottom-0 w-[1.5px] bg-gradient-to-b from-[#0A84FF]/0 via-[#0A84FF]/40 to-[#0A84FF]/0 z-0 hidden lg:block" />
+                )}
                 {/* Mode Icon */}
                 <div className="text-accent-blue apple-border-shine rounded-full p-2 flex items-center justify-center h-12 w-12 shrink-0">
                   <Icon className="h-10 w-10 stroke-[1.5]" />

@@ -34,14 +34,14 @@ export default function HomeV2Page() {
       {/* V2 Process Section */}
       <ProcessSection />
 
-      {/* V2 Testimonials Section */}
-      <TestimonialsSection />
-
       {/* V2 Smarter Way Section */}
       <SmarterWaySection />
 
       {/* V2 Get In Touch Section */}
       <GetInTouchSection />
+
+      {/* V2 Testimonials Section */}
+      <TestimonialsSection />
 
       {/* V2 Call To Action Banner Section */}
       <CtaSection />

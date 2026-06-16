@@ -44,6 +44,9 @@ export default function WhyChooseUsSection() {
               alt="Luxury Living Room Night View with Ambient Lighting"
               className="w-full h-full object-cover object-center absolute inset-0"
             />
+            {/* Premium overlays for image depth and blending */}
+            <div className="absolute inset-0 bg-black/10 dark:bg-black/35 z-10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-bg-main via-bg-main/30 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-bg-main/30 lg:to-bg-main z-10 pointer-events-none" />
           </div>
 
           {/* Right Column: Dark content panel (Spans 7/12 cols) */}
@@ -60,15 +63,19 @@ export default function WhyChooseUsSection() {
               </h2>
             </div>
 
-            {/* Bottom Features Row (5 columns with vertical dividers on desktop) */}
-            <div className="mt-12 lg:mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 lg:gap-y-0 lg:divide-x lg:divide-border-main">
+            {/* Bottom Features Row (5 columns with glowing vertical dividers on desktop) */}
+            <div className="mt-12 lg:mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 lg:gap-y-0">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
                   <div
                     key={index}
-                    className="flex flex-col items-center text-center px-2 sm:px-4 first:pl-0 last:pr-0"
+                    className="relative flex flex-col items-center text-center px-2 sm:px-4"
                   >
+                    {/* Custom vertical gradient divider as border-right on desktop */}
+                    {index < features.length - 1 && (
+                      <div className="absolute right-0 top-0 bottom-0 w-[1.5px] bg-gradient-to-b from-[#0A84FF]/0 via-[#0A84FF]/40 to-[#0A84FF]/0 z-0 hidden lg:block" />
+                    )}
                     {/* Icon */}
                     <div className="text-accent-blue apple-border-shine rounded-full p-2 flex items-center justify-center h-12 w-12 shrink-0">
                       <Icon className="h-10 w-10 stroke-[1.5]" />
