@@ -1,9 +1,71 @@
 import React from "react";
-import { Lightbulb, Thermometer, ShieldCheck, Play } from "lucide-react";
 import WaveButton from "@/components/common/WaveButton";
 import heroBg from "../../../assets/images/home_v2/hero_bg.png";
 
-// Simple custom columns/curtains icon
+// Custom Incandescent Lightbulb Icon matching mockup details
+function LightbulbIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      {/* Bulb body outline */}
+      <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5" />
+      {/* U-shaped filament inside */}
+      <path d="M10 13V10a2 2 0 0 1 4 0v3" />
+      {/* Base contact lines */}
+      <path d="M9 18h6" />
+      <path d="M10 21h4" />
+      {/* Mockup-precise 7 light rays */}
+      <path d="M12 2v2" />
+      <path d="M4.9 4.9l1.4 1.4" />
+      <path d="M19.1 4.9l-1.4 1.4" />
+      <path d="M3 10h2" />
+      <path d="M21 10h-2" />
+      <path d="M4.9 15.1l1.4-1.4" />
+      <path d="M19.1 15.1l-1.4-1.4" />
+    </svg>
+  );
+}
+
+// Custom Thermometer with horizontal breeze/airflow rays on left/right
+function ClimateIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      {/* Thermometer outer body */}
+      <path d="M14 14.76V3.5a2 2 0 0 0-4 0v11.26a4.5 4.5 0 1 0 4 0z" />
+      {/* Vertical inner mercury indicator line */}
+      <path d="M12 7v5" />
+      {/* Inner mercury bulb filled */}
+      <circle cx="12" cy="16.5" r="2" fill="currentColor" />
+      {/* Left side horizontal waves */}
+      <path d="M6 7.5c-1-.5-2 .5-3 0" />
+      <path d="M6 11c-1.2-.5-2.5.5-3.5 0" />
+      <path d="M6 14.5c-1-.5-2 .5-3 0" />
+      {/* Right side horizontal waves */}
+      <path d="M18 7.5c1-.5 2 .5 3 0" />
+      <path d="M18 11c1.2-.5 2.5.5 3.5 0" />
+      <path d="M18 14.5c1-.5 2 .5 3 0" />
+    </svg>
+  );
+}
+
+// Custom Tied-Back curtains with top rod finials
 function CurtainsIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -16,11 +78,60 @@ function CurtainsIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      <rect width="18" height="18" x="3" y="3" rx="2" />
-      <path d="M12 3v18" />
-      <path d="M3 8h18" />
-      <path d="M8 3c0 4-2 6-5 6" />
-      <path d="M16 3c0 4 2 6 5 6" />
+      {/* Rod */}
+      <path d="M3 5h18" />
+      <circle cx="2" cy="5" r="1" fill="currentColor" />
+      <circle cx="22" cy="5" r="1" fill="currentColor" />
+      {/* Left Curtain tied back */}
+      <path d="M5 5v13c0 1 .5 1.5 1.5 1.5h3c.5 0 1-.5 1-1.5v-3.5c0-.8-.5-1.5-1-2-.5-.5-1-1.2-1-2V5H5z" />
+      <path d="M5 12h4.5" />
+      {/* Right Curtain tied back */}
+      <path d="M19 5v13c0 1-.5 1.5-1.5 1.5h-3c-.5 0-1-.5-1-1.5v-3.5c0-.8.5-1.5 1-2s1-1.2 1-2V5h3z" />
+      <path d="M14.5 12h4.5" />
+    </svg>
+  );
+}
+
+// Custom Shield with solid filled star inside
+function SecurityStarIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <polygon
+        points="12 7.5 13.5 10.5 16.8 10.5 14.2 12.5 15.2 15.8 12 14 8.8 15.8 9.8 12.5 7.2 10.5 10.5 10.5"
+        fill="currentColor"
+        stroke="none"
+      />
+    </svg>
+  );
+}
+
+// Custom Theatre screen with solid filled Play button in center
+function TheatreScreenIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <rect width="20" height="12" x="2" y="4" rx="2" />
+      <line x1="12" x2="12" y1="16" y2="20" />
+      <line x1="8" x2="16" y1="20" y2="20" />
+      <polygon points="10.5 7.5 15 10 10.5 12.5" fill="currentColor" stroke="none" />
     </svg>
   );
 }
@@ -28,13 +139,13 @@ function CurtainsIcon(props: React.SVGProps<SVGSVGElement>) {
 export default function HeroSectionV2() {
   const statusItems = [
     {
-      icon: Lightbulb,
+      icon: LightbulbIcon,
       label: "LIGHTS",
       value: "Living Room",
       status: "active",
     },
     {
-      icon: Thermometer,
+      icon: ClimateIcon,
       label: "CLIMATE",
       value: "24°C",
       status: "active",
@@ -46,13 +157,13 @@ export default function HeroSectionV2() {
       status: "active",
     },
     {
-      icon: ShieldCheck,
+      icon: SecurityStarIcon,
       label: "SECURITY",
       value: "Armed",
       status: "armed",
     },
     {
-      icon: Play,
+      icon: TheatreScreenIcon,
       label: "THEATRE",
       value: "Playing",
       status: "active",
@@ -123,27 +234,36 @@ export default function HeroSectionV2() {
         </div>
 
         {/* Hero Right Sidebar (Status Dashboard) */}
-        <div className="w-full max-w-[40%] shrink-0 flex flex-col justify-center items-start md:items-end">
-          <div className="flex flex-col gap-8 sm:gap-10 transition-all duration-500 group pr-4 lg:pr-12">
+        <div className="w-full lg:w-auto lg:max-w-[40%] shrink-0 flex flex-col justify-center items-start lg:items-end">
+          <div className="flex flex-col transition-all duration-500 group pr-4 lg:pr-12">
             {statusItems.map((item, index) => {
               const Icon = item.icon;
               return (
-                <div key={index} className="flex items-center gap-5 group/item">
-                  {/* Clean Icon on Left */}
-                  <div className="text-gold-primary apple-border-shine rounded-full transition-all duration-300 shrink-0 flex items-center justify-center w-12 h-12">
-                    <Icon className="h-8 w-8 stroke-[1.5]" />
-                  </div>
+                <React.Fragment key={index}>
+                  {/* Floating vertical blue indicator dash centered between boxes */}
+                  {index > 0 && (
+                    <div className="w-16 flex justify-center py-2.5">
+                      <div className="w-[2px] h-[6px] bg-[#0A84FF] shadow-[0_0_8px_rgba(10,132,255,0.9)] opacity-80" />
+                    </div>
+                  )}
 
-                  {/* Text on Right */}
-                  <div className="flex flex-col text-left">
-                    <span className="font-sans text-[11px] sm:text-xs font-bold tracking-[0.25em] text-text-main uppercase">
-                      {item.label}
-                    </span>
-                    <span className="font-serif text-sm sm:text-base text-text-main font-semibold group-hover/item:text-gold-primary transition-colors duration-200 mt-1">
-                      {item.value}
-                    </span>
+                  <div className="flex items-center gap-5 group/item">
+                    {/* Glowing Square Box */}
+                    <div className="text-white bg-[#061121]/45 backdrop-blur-xl border border-[#0A84FF]/40 shadow-[0_0_15px_rgba(10,132,255,0.25),inset_0_0_10px_rgba(10,132,255,0.15)] rounded-[18px] transition-all duration-300 shrink-0 flex items-center justify-center w-16 h-16 group-hover/item:scale-105 group-hover/item:border-[#0A84FF]/80 group-hover/item:shadow-[0_0_25px_rgba(10,132,255,0.5),inset_0_0_12px_rgba(10,132,255,0.25)]">
+                      <Icon className="h-9 w-9 text-white drop-shadow-[0_0_8px_rgba(10,132,255,0.85)] stroke-[1.5] transition-transform duration-300 group-hover/item:scale-110" />
+                    </div>
+
+                    {/* Text on Right */}
+                    <div className="flex flex-col text-left">
+                      <span className="font-sans text-xs sm:text-[13px] font-bold tracking-[0.15em] text-text-main uppercase group-hover/item:text-[#0A84FF] transition-colors duration-200">
+                        {item.label}
+                      </span>
+                      <span className="font-sans text-[11px] sm:text-xs text-text-muted mt-1.5 font-medium group-hover/item:text-text-main transition-colors duration-200">
+                        {item.value}
+                      </span>
+                    </div>
                   </div>
-                </div>
+                </React.Fragment>
               );
             })}
           </div>

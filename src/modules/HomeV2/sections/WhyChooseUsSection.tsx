@@ -70,8 +70,8 @@ export default function WhyChooseUsSection() {
                     className="flex flex-col items-center text-center px-2 sm:px-4 first:pl-0 last:pr-0"
                   >
                     {/* Icon */}
-                    <div className="text-accent-blue flex items-center justify-center h-10 w-10 shrink-0">
-                      <Icon className="h-8 w-8 stroke-[1.5]" />
+                    <div className="text-accent-blue apple-border-shine rounded-full p-2 flex items-center justify-center h-12 w-12 shrink-0">
+                      <Icon className="h-10 w-10 stroke-[1.5]" />
                     </div>
 
                     {/* Title */}

@@ -102,8 +102,8 @@ export default function ContactStrip({
 
           {/* Column 2: Call Us */}
           <div className="flex flex-col items-center justify-center text-center px-4 lg:py-2">
-            <div className="w-12 h-12 rounded-full border apple-border-shine border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
-              <Phone className="h-4.5 w-4.5 stroke-[1.5]" />
+            <div className="w-14 h-14 rounded-full border apple-border-shine border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
+              <Phone className="h-5.5 w-5.5 stroke-[1.5]" />
             </div>
             <h4 className="font-sans text-xs font-bold text-text-main tracking-wider uppercase">
               {phone.label}
@@ -124,8 +124,8 @@ export default function ContactStrip({
 
           {/* Column 3: Email Us */}
           <div className="flex flex-col items-center justify-center text-center px-4 lg:py-2">
-            <div className="w-12 h-12 apple-border-shine rounded-full border border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
-              <Mail className="h-4.5 w-4.5 stroke-[1.5]" />
+            <div className="w-14 h-14 apple-border-shine rounded-full border border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
+              <Mail className="h-5.5 w-5.5 stroke-[1.5]" />
             </div>
             <h4 className="font-sans text-xs font-bold text-text-main tracking-wider uppercase">
               {email.label}
@@ -146,8 +146,8 @@ export default function ContactStrip({
 
           {/* Column 4: Visit Us */}
           <div className="flex flex-col items-center justify-center text-center px-4 lg:py-2">
-            <div className="w-12 h-12 rounded-full border apple-border-shine border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
-              <MapPin className="h-4.5 w-4.5 stroke-[1.5]" />
+            <div className="w-14 h-14 rounded-full border apple-border-shine border-accent-blue/30 bg-accent-blue/5 flex items-center justify-center text-accent-blue shadow-[0_0_12px_rgba(10,132,255,0.1)] transition-all duration-300 hover:scale-105 hover:bg-accent-blue/10 hover:border-accent-blue/50 mb-3 shrink-0">
+              <MapPin className="h-5.5 w-5.5 stroke-[1.5]" />
             </div>
             <h4 className="font-sans text-xs font-bold text-text-main tracking-wider uppercase">
               {address.label}
@@ -178,7 +178,7 @@ export default function ContactStrip({
                 {cta.label}
               </span>
               <div className="w-8 h-8 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white shrink-0 group-hover:bg-white/10 group-hover:border-white/40 transition-all duration-300">
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" />
               </div>
             </a>
           </div>

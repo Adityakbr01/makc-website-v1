@@ -290,6 +290,7 @@
   }
 
   html {
+    font-size: 112.5%;
     scroll-behavior: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

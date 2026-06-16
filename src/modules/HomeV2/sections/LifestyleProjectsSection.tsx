@@ -81,8 +81,8 @@ export default function LifestyleProjectsSection() {
                 className="flex flex-col items-center text-center px-4 first:pl-0 last:pr-0"
               >
                 {/* Mode Icon */}
-                <div className="text-accent-blue apple-border-shine rounded-full p-2 flex items-center justify-center h-10 w-10 shrink-0">
-                  <Icon className="h-8 w-8 stroke-[1.5]" />
+                <div className="text-accent-blue apple-border-shine rounded-full p-2 flex items-center justify-center h-12 w-12 shrink-0">
+                  <Icon className="h-10 w-10 stroke-[1.5]" />
                 </div>
 
                 {/* Mode Title */}
@@ -137,7 +137,7 @@ export default function LifestyleProjectsSection() {
         <div className="flex justify-center mt-12">
           <button className="home-wave-cta cursor-pointer apple-border-shine flex rounded-full items-center gap-2 border border-border-main text-text-main px-8 py-3.5 uppercase text-[10px] sm:text-[11px] font-bold tracking-widest bg-transparent" style={{ '--cta-accent': '#0A84FF' } as React.CSSProperties}>
             <span className="relative z-10">Explore All Projects</span>
-            <ArrowRight className="h-4 w-4 relative z-10" />
+            <ArrowRight className="h-5 w-5 relative z-10" />
           </button>
         </div>
 

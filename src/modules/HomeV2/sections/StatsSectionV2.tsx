@@ -36,7 +36,7 @@ export default function StatsSectionV2() {
                 className="flex items-center justify-center gap-4 px-4 md:px-6 lg:px-8 text-left group first:pl-0 last:pr-0"
               >
                 {/* Icon wrapper */}
-                <div className="h-9 w-9 shrink-0 rounded-none flex items-center justify-center text-accent-blue transition-all duration-300">
+                <div className="h-11 w-11 shrink-0 rounded-none flex items-center justify-center text-accent-blue transition-all duration-300">
                   <Icon className="h-full w-full stroke-[1.5]" />
                 </div>
                 

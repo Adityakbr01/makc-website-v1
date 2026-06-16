@@ -229,14 +229,14 @@ export default function Footer() {
                 href="tel:+919948432444"
                 className="flex items-center gap-3 hover:text-accent-blue transition-colors duration-200"
               >
-                <Phone className="h-4 w-4 shrink-0 text-accent-blue stroke-[1.5]" />
+                <Phone className="h-5 w-5 shrink-0 text-accent-blue stroke-[1.5]" />
                 <span>+91 99484 32444</span>
               </a>
               <a
                 href="mailto:info@makcautomations.com"
                 className="flex items-center gap-3 hover:text-accent-blue transition-colors duration-200"
               >
-                <Mail className="h-4 w-4 shrink-0 text-accent-blue stroke-[1.5]" />
+                <Mail className="h-5 w-5 shrink-0 text-accent-blue stroke-[1.5]" />
                 <span className="break-all">info@makcautomations.com</span>
               </a>
               <div className="flex items-center gap-2.5 mt-2">
@@ -247,7 +247,7 @@ export default function Footer() {
                   className="w-8 h-8 rounded-full apple-border-shine border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
                   aria-label="Instagram"
                 >
-                  <Instagram className="h-3.5 w-3.5 stroke-[1.5]" />
+                  <Instagram className="h-4.5 w-4.5 stroke-[1.5]" />
                 </a>
                 <a
                   href="https://facebook.com"
@@ -256,7 +256,7 @@ export default function Footer() {
                   className="w-8 h-8 rounded-full apple-border-shine border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
                   aria-label="Facebook"
                 >
-                  <Facebook className="h-3.5 w-3.5 stroke-[1.5]" />
+                  <Facebook className="h-4.5 w-4.5 stroke-[1.5]" />
                 </a>
                 <a
                   href="https://linkedin.com"
@@ -265,7 +265,7 @@ export default function Footer() {
                   className="w-8 h-8 rounded-full apple-border-shine border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="h-3.5 w-3.5 stroke-[1.5]" />
+                  <Linkedin className="h-4.5 w-4.5 stroke-[1.5]" />
                 </a>
                 <a
                   href="https://youtube.com"
@@ -274,7 +274,7 @@ export default function Footer() {
                   className="w-8 h-8 apple-border-shine rounded-full border border-border-main flex items-center justify-center text-text-muted hover:text-accent-blue hover:border-accent-blue transition-all duration-300"
                   aria-label="YouTube"
                 >
-                  <Youtube className="h-3.5 w-3.5 stroke-[1.5]" />
+                  <Youtube className="h-4.5 w-4.5 stroke-[1.5]" />
                 </a>
               </div>
             </div>
@@ -302,9 +302,9 @@ export default function Footer() {
               title="Toggle Theme"
             >
               {mounted && theme === "dark" ? (
-                <Sun className="h-4.5 w-4.5" />
+                <Sun className="h-5.5 w-5.5" />
               ) : (
-                <Moon className="h-4.5 w-4.5" />
+                <Moon className="h-5.5 w-5.5" />
               )}
             </button>
             <span className="text-border-main/50 text-[10px] select-none">

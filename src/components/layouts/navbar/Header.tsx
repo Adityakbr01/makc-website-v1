@@ -244,7 +244,7 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className="flex h-8 w-8 items-center justify-center rounded-full text-text-muted transition-colors hover:bg-bg-surface hover:text-text-main"
               >
-                <X className="h-5 w-5" />
+                <X className="h-6 w-6" />
               </button>
             </div>
 
@@ -286,7 +286,7 @@ export default function Header() {
               href="tel:+919999999999"
               className="flex h-11 w-full items-center justify-center gap-2 rounded-none bg-gold-primary text-sm font-bold text-black transition-all hover:bg-gold-hover hover:text-black shadow-[0_4px_15px_rgba(10,132,255,0.3)]"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-5 w-5" />
               <span>CALL NOW</span>
             </a>
           </div>
