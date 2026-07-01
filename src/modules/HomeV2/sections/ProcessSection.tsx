@@ -7,30 +7,37 @@ export default function ProcessSection() {
   const steps = [
     {
       number: "01",
-      title: "Private Consultation",
+      title: "Personalized Consultation",
       description:
         "We sit down with you to understand your lifestyle, preferences, and how you envision your smart home. Every detail matters.",
       image: imgConsultation,
     },
     {
       number: "02",
-      title: "Design & Planning",
+      title: "Electrical Planning",
       description:
-        "Our engineers craft a custom automation blueprint — optimised for seamless integration, aesthetics, and future scalability.",
+        "Our engineers map out every circuit, connection, and load point — ensuring a robust foundation for your automation system.",
       image: imgDesign,
     },
     {
       number: "03",
+      title: "Customized Design",
+      description:
+        "A tailored automation blueprint crafted for seamless integration, aesthetics, and future scalability.",
+      image: imgDesign,
+    },
+    {
+      number: "04",
       title: "Professional Installation",
       description:
         "Certified technicians handle every wire, device, and connection with precision — zero compromise on quality or safety.",
       image: imgInstallation,
     },
     {
-      number: "04",
-      title: "White Glove Support",
+      number: "05",
+      title: "24x7 Support",
       description:
-        "Dedicated after-sales assistance, proactive system monitoring, and priority maintenance — we're always a call away.",
+        "Round-the-clock assistance, proactive system monitoring, and priority maintenance — we're always a call away.",
       image: imgSupport,
     },
   ];
@@ -56,13 +63,13 @@ export default function ProcessSection() {
             <span className="text-accent-blue">Reality</span>, Step by Step
           </h2>
           <p className="mt-4 text-text-muted text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-            A refined, four-phase approach designed to deliver a flawless smart
+            A refined, five-phase approach designed to deliver a flawless smart
             home experience — without the complexity.
           </p>
         </div>
 
-        {/* Desktop: 4-column grid with custom glowing vertical dividers */}
-        <div className="relative hidden lg:grid grid-cols-4 gap-8 text-left">
+        {/* Desktop: 5-column grid with custom glowing vertical dividers */}
+        <div className="relative hidden lg:grid grid-cols-5 gap-8 text-left">
           {steps.map((step, index) => {
             const isTop = index % 2 === 0;
             return (

@@ -5,13 +5,13 @@ export default function WhyChooseUsSection() {
   const features = [
     {
       icon: Compass,
-      title: "Custom Designed",
-      description: "Every project is unique.",
+      title: "Custom Solution",
+      description: "Tailored to your lifestyle.",
     },
     {
       icon: Cpu,
-      title: "Premium Brands",
-      description: "Only globally trusted technology partners.",
+      title: "Premium Materials",
+      description: "Only globally trusted brands.",
     },
     {
       icon: Link,
@@ -21,11 +21,11 @@ export default function WhyChooseUsSection() {
     {
       icon: Ruler,
       title: "Clean Installations",
-      description: "Invisible wiring. Flawless execution.",
+      description: "Stress-free. Invisible wiring.",
     },
     {
       icon: ShieldCheck,
-      title: "Dedicated Support",
+      title: "Personalized Support",
       description: "Long after installation.",
     },
   ];

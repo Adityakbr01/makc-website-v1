@@ -10,6 +10,8 @@ import TestimonialsSection from "../sections/TestimonialsSection";
 import SmarterWaySection from "../sections/SmarterWaySection";
 import GetInTouchSection from "../sections/GetInTouchSection";
 import CtaSection from "../sections/CtaSection";
+import LivingRoomSceneControlsSection from "../sections/LivingroomscenecontrolsSection";
+import BedroomControlsSection from "../sections/BedroomControlsSection";
 
 export default function HomeV2Page() {
   return (
@@ -49,6 +51,9 @@ export default function HomeV2Page() {
 
       {/* V2 Call To Action Banner Section */}
       <CtaSection />
+
+      <LivingRoomSceneControlsSection />
+      <BedroomControlsSection />
     </div>
   );
 }
