@@ -1,4 +1,4 @@
-import { Sun, ShieldCheck, Volume2, Wifi } from "lucide-react";
+import { Sun, ShieldCheck, Volume2, Wifi, Zap } from "lucide-react";
 import React from "react";
 
 // Import images
@@ -7,6 +7,7 @@ import imgLighting from "../../../assets/images/home_v2/service_lighting.png";
 import imgSecurity from "../../../assets/images/home_v2/service_security.png";
 import imgNetworking from "../../../assets/images/home_v2/service_networking.png";
 import imgAudio from "../../../assets/images/home_v2/service_theatre.png";
+import imgEnergy from "../../../assets/images/home_v2/service_energy.png";
 
 // Custom icons matching luxury styles
 function SmartHomeIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -64,6 +65,13 @@ export default function ServicesSectionV2() {
       title: "Home Audio",
       description: "Multi-room sound that fills every corner with clarity.",
       bgImage: imgAudio,
+    },
+    {
+      id: "electric",
+      icon: Zap,
+      title: "Home Electric",
+      description: "Intelligent power distribution, backups and energy monitoring.",
+      bgImage: imgEnergy,
     },
   ];
 

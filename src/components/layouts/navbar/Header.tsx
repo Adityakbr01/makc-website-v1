@@ -48,6 +48,7 @@ export default function Header() {
 
   const gridDropdownLinks = [
     { label: "About", path: "/about" },
+    { label: "Why Us", path: "/why-us" },
     { label: "Service", path: "/service" },
     { label: "Blog", path: "/blog" },
     { label: "Experience", path: "/experience" },
