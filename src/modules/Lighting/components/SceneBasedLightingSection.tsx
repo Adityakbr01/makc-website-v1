@@ -2,6 +2,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +54,7 @@ export default function SceneBasedLightingSection() {
           <div className="sbl-img row-span-2 relative rounded-[2rem] overflow-hidden group border border-border-main/20 shadow-md">
             <div className="absolute inset-0">
               <img 
-                src="/images/lighting/lightimage1.webp" 
+                src={getImageUrl("lightimage1.webp")} 
                 alt="Smart bedroom layout with warm circadian ambient lighting"
                 className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.04]"
               />
@@ -64,7 +66,7 @@ export default function SceneBasedLightingSection() {
           {/* Top-right: wider dining room */}
           <div className="sbl-img relative rounded-[2rem] overflow-hidden aspect-[4/3] group border border-border-main/20 shadow-md">
             <img 
-              src="/images/lighting/lightimage2.webp" 
+              src={getImageUrl("lightimage2.webp")} 
               alt="Temple room design with backlit gold panels and chandelier"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.04]"
             />
@@ -74,7 +76,7 @@ export default function SceneBasedLightingSection() {
           {/* Bottom-right: close-up switch */}
           <div className="sbl-img relative rounded-[2rem] overflow-hidden aspect-[4/3] group border border-border-main/20 shadow-md">
             <img 
-              src="/images/lighting/lightimage3.webp" 
+              src={getImageUrl("lightimage3.webp")} 
               alt="Tactile wall lighting touch panel mounted near bedroom wall"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.04]"
             />

@@ -1,7 +1,8 @@
-import imgConsultation from "../../../assets/images/home_v2/process_consultation.webp";
-import imgDesign from "../../../assets/images/home_v2/process_design.webp";
-import imgInstallation from "../../../assets/images/home_v2/process_installation.webp";
-import imgSupport from "../../../assets/images/home_v2/process_support.webp";
+import { getImageUrl } from "@/utils/image";
+const imgConsultation = getImageUrl("process_consultation.webp");
+const imgDesign = getImageUrl("process_design.webp");
+const imgInstallation = getImageUrl("process_installation.webp");
+const imgSupport = getImageUrl("process_support.webp");
 
 export default function ProcessSection() {
   const steps = [

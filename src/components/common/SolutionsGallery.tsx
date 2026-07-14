@@ -2,28 +2,30 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const columns = [
   // Column 1 (Left column in wireframe)
   [
-    { src: "/images/Social Media Post/Rectangle 54361.webp", alt: "Cozy interior living room swing and sofa layout" },
-       { src: "/images/Social Media Post/Rectangle 54366.webp", alt: "Smart touch panel control plate on grooved wall panels" },
-    { src: "/images/Social Media Post/Rectangle 54367.webp", alt: "Modern double story villa facade view at sunset" }
+    { src: getImageUrl("Rectangle 54361.webp"), alt: "Cozy interior living room swing and sofa layout" },
+       { src: getImageUrl("Rectangle 54366.webp"), alt: "Smart touch panel control plate on grooved wall panels" },
+    { src: getImageUrl("Rectangle 54367.webp"), alt: "Modern double story villa facade view at sunset" }
   ],
   // Column 2 (Middle column in wireframe)
   [
-    { src: "/images/Social Media Post/Rectangle 54360.webp", alt: "Close up of touch pad switch mounted on wood panels" },
-    { src: "/images/Social Media Post/Rectangle 54368.webp", alt: "Luxury bedroom design with warm cove lights and watermark" },
-    { src: "/images/Social Media Post/Rectangle 54364.webp", alt: "Matte black socket outlets on wood boards with leaves decoration" }
+    { src: getImageUrl("Rectangle 54360.webp"), alt: "Close up of touch pad switch mounted on wood panels" },
+    { src: getImageUrl("Rectangle 54368.webp"), alt: "Luxury bedroom design with warm cove lights and watermark" },
+    { src: getImageUrl("Rectangle 54364.webp"), alt: "Matte black socket outlets on wood boards with leaves decoration" }
   ],
   // Column 3 (Right column in wireframe)
   [
-    { src: "/images/Social Media Post/Rectangle 54362.webp", alt: "Sleek biometric finger print door lock panel" },
+    { src: getImageUrl("Rectangle 54362.webp"), alt: "Sleek biometric finger print door lock panel" },
 
-     { src: "/images/Social Media Post/Rectangle 54363.webp", alt: "Temple room background with backlit wall decoration" },
-    { src: "/images/Social Media Post/Group 212355.webp", alt: "Luxury entrance door lock handle mechanism close up" }
+     { src: getImageUrl("Rectangle 54363.webp"), alt: "Temple room background with backlit wall decoration" },
+    { src: getImageUrl("Group 212355.webp"), alt: "Luxury entrance door lock handle mechanism close up" }
   ]
 ];
 

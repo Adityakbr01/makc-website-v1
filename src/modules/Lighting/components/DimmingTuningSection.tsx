@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { Lightbulb } from "lucide-react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,7 +114,7 @@ export default function DimmingTuningSection() {
           {/* Right Column: Panel Image */}
           <div className="dt-image-fade lg:col-span-6 aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-lg group bg-white/5 relative">
             <img
-              src="/images/lighting/dimeLight.webp"
+              src={getImageUrl("dimeLight.webp")}
               alt="Dimming and color tuning of LED lights in modern luxury lobby area layout"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.03]"
             />

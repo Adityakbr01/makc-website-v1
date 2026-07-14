@@ -37,14 +37,16 @@ import OutdoorLightingSection from "../components/OutdoorLightingSection";
 import TimeBasedLightingSection from "../components/TimeBasedLightingSection";
 
 // Import images
-// import serviceLightingImg from "@/assets/images/home_v2/service_lighting.webp";
-import whyChooseUsImg from "@/assets/images/home_v2/why_choose_us.webp";
-import projectApartmentsImg from "@/assets/images/home_v2/project_apartments.webp";
-import projectFarmhousesImg from "@/assets/images/home_v2/project_farmhouses.webp";
-import projectPenthousesImg from "@/assets/images/home_v2/project_penthouses.webp";
-import projectCommercialImg from "@/assets/images/home_v2/project_commercial.webp";
+// const serviceLightingImg = getImageUrl("service_lighting.webp");
+const whyChooseUsImg = getImageUrl("why_choose_us.webp");
+const projectApartmentsImg = getImageUrl("project_apartments.webp");
+const projectFarmhousesImg = getImageUrl("project_farmhouses.webp");
+const projectPenthousesImg = getImageUrl("project_penthouses.webp");
+const projectCommercialImg = getImageUrl("project_commercial.webp");
 
 import useSEO from "@/hooks/useSEO";
+import { getImageUrl } from "@/utils/image";
+
 
 export default function LightingPage() {
   useSEO({

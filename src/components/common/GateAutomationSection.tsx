@@ -19,6 +19,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 // import { CheckCircle2 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -82,7 +84,7 @@ export default function GateAutomationSection() {
           <div className="gate-img row-span-2 relative rounded-2xl overflow-hidden group">
             <div className="absolute inset-0">
               <img
-                src="/images/automation/getAuto1.webp"
+                src={getImageUrl("getAuto1.webp")}
                 alt="Smart villa entrance with automated gate, illuminated at night"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
@@ -94,7 +96,7 @@ export default function GateAutomationSection() {
           {/* Top-right: wider villa shot */}
           <div className="gate-img relative rounded-2xl overflow-hidden aspect-[4/3] group">
             <img
-              src="/images/automation/getAuto2.webp"
+              src={getImageUrl("getAuto2.webp")}
               alt="Wider view of villa exterior with landscaped entrance at night"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
             />
@@ -104,7 +106,7 @@ export default function GateAutomationSection() {
           {/* Bottom-right: security camera */}
           <div className="gate-img relative rounded-2xl overflow-hidden aspect-[4/3] group">
             <img
-              src="/images/automation/getAuto3.webp"
+              src={getImageUrl("getAuto3.webp")}
               alt="Gate surveillance camera mounted on travertine stone wall above doorway"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
             />

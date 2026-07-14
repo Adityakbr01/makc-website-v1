@@ -1,7 +1,9 @@
 import { Headphones, Calendar, ShieldCheck, Handshake, Phone, Mail, Globe, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import GlowingLine from "@/components/common/GlowingLine";
-import imgContactBg from "../../../assets/images/home_v2/contact_villa_night.webp";
+import { getImageUrl } from "@/utils/image";
+
+const imgContactBg = getImageUrl("contact_villa_night.webp");
 
 export default function GetInTouchSection() {
   const features = [

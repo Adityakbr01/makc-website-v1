@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { Clock } from "lucide-react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -113,7 +115,7 @@ export default function TimeBasedLightingSection() {
           {/* Right Column: Panel Image */}
           <div className="tbl-image-fade lg:col-span-6 aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-lg group bg-white/5 relative">
             <img
-              src="/images/lighting/timeLightImage.webp"
+              src={getImageUrl("timeLightImage.webp")}
               alt="Circadian schedules and automation setup in warm home dining lighting environment"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.03]"
             />

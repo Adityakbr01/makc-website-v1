@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 
 interface Hotspot {
   id: string;
@@ -48,7 +50,7 @@ export default function LightingHero() {
     <section
       ref={heroRef}
       className="relative min-h-[90vh] lg:min-h-screen w-full flex items-center justify-start bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/2151349208.webp')" }}
+      style={{ backgroundImage: `url('${getImageUrl("2151349208.webp")}')` }}
     >
       {/* Dark overlay for contrast */}
       <div className="absolute inset-0 bg-black/65" />
@@ -79,7 +81,7 @@ export default function LightingHero() {
               designed smart lighting automation in Bangalore, MAKc Automation helps you control every 
               light in your space with ease.
               <img
-                src="/images/automation/star.webp"
+                src={getImageUrl("star.webp")}
                 alt=""
                 aria-hidden="true"
                 className="w-6 h-6 inline-block ml-2 mb-1 select-none"

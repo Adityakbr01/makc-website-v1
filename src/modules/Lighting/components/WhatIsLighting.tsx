@@ -2,28 +2,30 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const categories = [
   {
     title: "Touch panels",
-    img: "/images/lighting/Touch panels.webp",
+    img: getImageUrl("Touch panels.webp"),
     alt: "Premium wall mounted lighting control touch panel"
   },
   {
     title: "Voice Commands",
-    img: "/images/lighting/Voice Commands.webp",
+    img: getImageUrl("Voice Commands.webp"),
     alt: "Modern tactile smart keyboard switches on wall"
   },
   {
     title: "Mood Lighting",
-    img: "/images/lighting/Mood Lighting.webp",
+    img: getImageUrl("Mood Lighting.webp"),
     alt: "Circadian smart lighting system near entryway door"
   },
   {
     title: "Scheduling",
-    img: "/images/lighting/Scheduling.webp",
+    img: getImageUrl("Scheduling.webp"),
     alt: "Warm ambient smart dining lighting layout"
   }
 ];

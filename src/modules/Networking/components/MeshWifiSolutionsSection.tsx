@@ -2,6 +2,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,7 +52,7 @@ export default function MeshWifiSolutionsSection() {
           <div className="mws-img row-span-2 relative rounded-[2rem] overflow-hidden group border border-border-main/20 shadow-md">
             <div className="absolute inset-0">
               <img 
-                src="/images/networking/netSolutionImage1.webp" 
+                src={getImageUrl("netSolutionImage1.webp")} 
                 alt="Networking device mounted under sleek wooden shelves with strip lighting"
                 className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.04]"
               />
@@ -62,7 +64,7 @@ export default function MeshWifiSolutionsSection() {
           {/* Top-right: Ajax hub */}
           <div className="mws-img relative rounded-[2rem] overflow-hidden aspect-[4/3] group border border-border-main/20 shadow-md">
             <img 
-              src="/images/networking/netSolutionImage2.webp" 
+              src={getImageUrl("netSolutionImage2.webp")} 
               alt="Wireless smart hub panel with glowing green brand logo"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.04]"
             />
@@ -72,7 +74,7 @@ export default function MeshWifiSolutionsSection() {
           {/* Bottom-right: intercom intercom doorbell */}
           <div className="mws-img relative rounded-[2rem] overflow-hidden aspect-[4/3] group border border-border-main/20 shadow-md">
             <img 
-              src="/images/networking/netSolutionImage3.webp" 
+              src={getImageUrl("netSolutionImage3.webp")} 
               alt="Smart intercom video door phone station on elegant marble wall"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.04]"
             />

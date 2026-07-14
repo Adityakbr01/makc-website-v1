@@ -2,33 +2,35 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const categories = [
   {
     title: "Homes & Apartments",
-    img: "/images/networking/home.webp",
+    img: getImageUrl("home.webp"),
     alt: "Icon representing homes and apartments"
   },
   {
     title: "Villas & Independent Houses",
-    img: "/images/networking/house.webp",
+    img: getImageUrl("house.webp"),
     alt: "Icon representing villas and independent houses"
   },
   {
     title: "Offices & Workspaces",
-    img: "/images/networking/workshop.webp",
+    img: getImageUrl("workshop.webp"),
     alt: "Icon representing offices and workspaces"
   },
   {
     title: "Retail & Commercial Spaces",
-    img: "/images/networking/commercial.webp",
+    img: getImageUrl("commercial.webp"),
     alt: "Icon representing retail and commercial spaces"
   },
   {
     title: "Multi-floor & large properties",
-    img: "/images/networking/Multi-floor.webp",
+    img: getImageUrl("Multi-floor.webp"),
     alt: "Icon representing multi-floor and large properties"
   }
 ];

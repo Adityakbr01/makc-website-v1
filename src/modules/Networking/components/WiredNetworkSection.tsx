@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { Cable } from "lucide-react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,7 +119,7 @@ export default function WiredNetworkSection() {
           {/* Right Column: Panel Image */}
           <div className="wn-image-fade lg:col-span-6 aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-lg group bg-white/5 relative">
             <img
-              src="/images/networking/wiredNetwork.webp"
+              src={getImageUrl("wiredNetwork.webp")}
               alt="Close-up of wall touch panel and outlets in autumn setting"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.03]"
             />

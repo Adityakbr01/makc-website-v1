@@ -2,6 +2,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +56,7 @@ export default function CCTVMonitoringSection() {
           {/* Tall left image */}
           <div className="cctv-img-left col-span-7 relative rounded-[2rem] overflow-hidden group border border-border-main/20 shadow-md">
             <img 
-              src="/images/security/cam1.webp" 
+              src={getImageUrl("cam1.webp")} 
               alt="Wall-mounted high-definition outdoor CCTV camera monitoring entry point"
               className="w-full h-auto object-cover rounded-[2rem] transition-transform duration-750 group-hover:scale-[1.04]"
             />
@@ -63,7 +65,7 @@ export default function CCTVMonitoringSection() {
           {/* Square right image aligned at the bottom */}
           <div className="cctv-img-right col-span-5 relative rounded-[2rem] overflow-hidden group border border-border-main/20 shadow-md">
             <img 
-              src="/images/security/cam2.webp" 
+              src={getImageUrl("cam2.webp")} 
               alt="Tactile dome smart surveillance camera on travertine stone wall"
               className="w-full h-auto object-cover rounded-[2rem] transition-transform duration-750 group-hover:scale-[1.04]"
             />

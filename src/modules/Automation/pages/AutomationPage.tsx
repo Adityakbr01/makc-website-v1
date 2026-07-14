@@ -42,16 +42,18 @@ import CurtainAutomationSection from "@/components/common/CurtainAutomationSecti
 import ConnectBanner from "@/components/common/ConnectBanner";
 
 // Import images
-import villaNightImg from "@/assets/images/home_v2/contact_villa_night.webp";
-import serviceLightingImg from "@/assets/images/home_v2/service_lighting.webp";
-import whyChooseUsImg from "@/assets/images/home_v2/why_choose_us.webp";
-import projectVillasImg from "@/assets/images/home_v2/project_villas.webp";
-import projectApartmentsImg from "@/assets/images/home_v2/project_apartments.webp";
-import projectFarmhousesImg from "@/assets/images/home_v2/project_farmhouses.webp";
-import projectPenthousesImg from "@/assets/images/home_v2/project_penthouses.webp";
-import projectCommercialImg from "@/assets/images/home_v2/project_commercial.webp";
+const villaNightImg = getImageUrl("contact_villa_night.webp");
+const serviceLightingImg = getImageUrl("service_lighting.webp");
+const whyChooseUsImg = getImageUrl("why_choose_us.webp");
+const projectVillasImg = getImageUrl("project_villas.webp");
+const projectApartmentsImg = getImageUrl("project_apartments.webp");
+const projectFarmhousesImg = getImageUrl("project_farmhouses.webp");
+const projectPenthousesImg = getImageUrl("project_penthouses.webp");
+const projectCommercialImg = getImageUrl("project_commercial.webp");
 
 import useSEO from "@/hooks/useSEO";
+import { getImageUrl } from "@/utils/image";
+
 
 export default function AutomationPage() {
   useSEO({
@@ -258,7 +260,7 @@ export default function AutomationPage() {
       <section
         ref={heroRef}
         className="relative min-h-[90vh] lg:min-h-screen w-full flex items-center justify-start bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/images/2151349208.webp')` }}
+        style={{ backgroundImage: `url('${getImageUrl("2151349208.webp")}')` }}
       >
         {/* Dark overlay for contrast */}
         <div className="absolute inset-0 bg-black/65" />
@@ -291,7 +293,7 @@ export default function AutomationPage() {
                 across homes and select commercial spaces, here's what you can
                 expect from us.
                 <img
-                  src="/images/automation/star.webp"
+                  src={getImageUrl("star.webp")}
                   alt=""
                   aria-hidden="true"
                   className="w-6 h-6 inline-block ml-2 mb-1 select-none"
@@ -358,19 +360,19 @@ export default function AutomationPage() {
             {[
               {
                 title: "Electrical Automation",
-                img: "/images/automation/Electrical Automation.webp",
+                img: getImageUrl("Electrical Automation.webp"),
               },
               {
                 title: "Smart Door Automation",
-                img: "/images/automation/Smart Door Automation.webp",
+                img: getImageUrl("Smart Door Automation.webp"),
               },
               {
                 title: "Curtain Automation",
-                img: "/images/automation/Curtain Automation.webp",
+                img: getImageUrl("Curtain Automation.webp"),
               },
               {
                 title: "Gate Automation",
-                img: "/images/automation/Gate Automation.webp",
+                img: getImageUrl("Gate Automation.webp"),
               },
             ].map((item, idx) => {
               const isActive = activeAutomatedCard === idx;

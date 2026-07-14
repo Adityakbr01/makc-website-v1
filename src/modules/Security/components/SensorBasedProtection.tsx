@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { Shield } from "lucide-react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,7 +137,7 @@ export default function SensorBasedProtection() {
           {/* Right Column: Panel Image */}
           <div className="sbp-image-fade lg:col-span-6 aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-lg group bg-white/5 relative">
             <img
-              src="/images/security/sensor.webp"
+              src={getImageUrl("sensor.webp")}
               alt="Tactile wall-mounted smart glass and vibration intrusion sensor"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.03]"
             />

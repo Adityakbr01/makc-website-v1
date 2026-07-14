@@ -1,10 +1,12 @@
 import { ArrowRight } from "lucide-react";
-import imgVillas from "../../../assets/images/home_v2/project_villas.webp";
-import imgApartments from "../../../assets/images/home_v2/project_apartments.webp";
-import imgFarmhouses from "../../../assets/images/home_v2/project_farmhouses.webp";
-import imgPenthouses from "../../../assets/images/home_v2/project_penthouses.webp";
-import imgCommercial from "../../../assets/images/home_v2/project_commercial.webp";
+const imgVillas = getImageUrl("project_villas.webp");
+const imgApartments = getImageUrl("project_apartments.webp");
+const imgFarmhouses = getImageUrl("project_farmhouses.webp");
+const imgPenthouses = getImageUrl("project_penthouses.webp");
+const imgCommercial = getImageUrl("project_commercial.webp");
 import { Link } from "react-router";
+import { getImageUrl } from "@/utils/image";
+
 
 export default function ProjectsSection() {
   const projects = [

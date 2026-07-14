@@ -2,6 +2,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +56,7 @@ export default function OutdoorLightingSection() {
           {/* Tall left image */}
           <div className="out-img-left col-span-7 relative rounded-[2rem] overflow-hidden group border border-border-main/20 shadow-md">
             <img 
-              src="/images/lighting/outdoorImage1.webp" 
+              src={getImageUrl("outdoorImage1.webp")} 
               alt="Luxury villa entrance facade with automated exterior lighting"
               className="w-full h-auto object-cover rounded-[2rem] transition-transform duration-750 group-hover:scale-[1.04]"
             />
@@ -63,7 +65,7 @@ export default function OutdoorLightingSection() {
           {/* Square right image aligned at the bottom */}
           <div className="out-img-right col-span-5 relative rounded-[2rem] overflow-hidden group border border-border-main/20 shadow-md">
             <img 
-              src="/images/lighting/outdoorImage2.webp" 
+              src={getImageUrl("outdoorImage2.webp")} 
               alt="Warm spots and accent lighting in modern living room"
               className="w-full h-auto object-cover rounded-[2rem] transition-transform duration-750 group-hover:scale-[1.04]"
             />

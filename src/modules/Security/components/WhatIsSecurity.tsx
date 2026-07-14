@@ -2,28 +2,30 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getImageUrl } from "@/utils/image";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const categories = [
   {
     title: "Homes & Apartments",
-    img: "/images/security/Homes & Apartments.webp",
+    img: getImageUrl("Homes & Apartments.webp"),
     alt: "Smart control apartment interior lighting at dusk"
   },
   {
     title: "Villas & Independent Houses",
-    img: "/images/security/Villas.webp",
+    img: getImageUrl("Villas.webp"),
     alt: "Elegant modern villa architectural lights at night"
   },
   {
     title: "Offices & Workspaces",
-    img: "/images/security/Offices & Workspaces.webp",
+    img: getImageUrl("Offices & Workspaces.webp"),
     alt: "Smart workspace lighting and corporate interior"
   },
   {
     title: "Retail & Commercial Spaces",
-    img: "/images/security/Retail & Commercial Spaces.webp",
+    img: getImageUrl("Retail & Commercial Spaces.webp"),
     alt: "Premium commercial store lighting design"
   }
 ];

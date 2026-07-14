@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import BrandLogo from "@/components/common/BrandLogo";
+import { getImageUrl } from "@/utils/image";
+
 
 export default function FooterV2() {
   return (
@@ -131,9 +133,9 @@ export default function FooterV2() {
               </span>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  "/images/lighting/Touch panels.webp",
-                  "/images/automation/electric automation.webp",
-                  "/images/lighting/Scheduling.webp"
+                  getImageUrl("Touch panels.webp"),
+                  getImageUrl("electric automation.webp"),
+                  getImageUrl("Scheduling.webp")
                 ].map((img, idx) => (
                   <div key={idx} className="rounded-2xl overflow-hidden border border-white/10 aspect-[4/3] relative group shadow-md bg-neutral-900">
                     <img 

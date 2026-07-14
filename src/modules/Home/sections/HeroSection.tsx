@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { getImageUrl } from "@/utils/image";
+
 import {
   Carousel,
   CarouselContent,
@@ -10,19 +12,19 @@ import {
 
 const carouselItems = [
   {
-    image: "/assets/industrial-automation-overview.webp",
+    image: getImageUrl("industrial-automation-overview.webp"),
   },
   {
-    image: "/assets/industrial-cybersecurity.webp",
+    image: getImageUrl("industrial-cybersecurity.webp"),
   },
   {
-    image: "/assets/electrical-design.webp",
+    image: getImageUrl("electrical-design.webp"),
   },
   {
-    image: "/assets/system-integration.webp",
+    image: getImageUrl("system-integration.webp"),
   },
   {
-    image: "/assets/smart-interior.webp",
+    image: getImageUrl("smart-interior.webp"),
   },
 ];
 

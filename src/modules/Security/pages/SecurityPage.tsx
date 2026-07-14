@@ -41,16 +41,18 @@ import CCTVMonitoringSection from "../components/CCTVMonitoringSection";
 import SmartSecurityModes from "../components/SmartSecurityModes";
 
 // Import images
-// import serviceSecurityImg from "@/assets/images/home_v2/service_security.webp";
-import whyChooseUsImg from "@/assets/images/home_v2/why_choose_us.webp";
-import villaNightImg from "@/assets/images/home_v2/contact_villa_night.webp";
-import projectVillasImg from "@/assets/images/home_v2/project_villas.webp";
-import projectApartmentsImg from "@/assets/images/home_v2/project_apartments.webp";
-import projectFarmhousesImg from "@/assets/images/home_v2/project_farmhouses.webp";
-import projectPenthousesImg from "@/assets/images/home_v2/project_penthouses.webp";
-import projectCommercialImg from "@/assets/images/home_v2/project_commercial.webp";
+// const serviceSecurityImg = getImageUrl("service_security.webp");
+const whyChooseUsImg = getImageUrl("why_choose_us.webp");
+const villaNightImg = getImageUrl("contact_villa_night.webp");
+const projectVillasImg = getImageUrl("project_villas.webp");
+const projectApartmentsImg = getImageUrl("project_apartments.webp");
+const projectFarmhousesImg = getImageUrl("project_farmhouses.webp");
+const projectPenthousesImg = getImageUrl("project_penthouses.webp");
+const projectCommercialImg = getImageUrl("project_commercial.webp");
 
 import useSEO from "@/hooks/useSEO";
+import { getImageUrl } from "@/utils/image";
+
 
 export default function SecurityPage() {
   useSEO({
