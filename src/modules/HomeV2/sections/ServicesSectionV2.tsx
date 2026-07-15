@@ -136,6 +136,8 @@ export default function ServicesSectionV2() {
                       src={service.bgImage}
                       alt={service.id === "security" ? "Smart Home Security System" : service.id === "networking" ? "Home Networking Solutions" : service.title}
                       className="w-full h-full object-cover object-center filter transition-all duration-500"
+                      loading="lazy"
+                      decoding="async"
                     />
                     {/* Shadow overlay */}
                     <div className="absolute inset-0 bg-gradient-to-r from-bg-main via-bg-main/80 to-transparent" />

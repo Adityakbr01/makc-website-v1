@@ -123,6 +123,8 @@ export default function SmarterWaySection() {
           src={imgSmarterWayBg}
           alt="Smart Home At Night"
           className="w-full h-full object-cover object-center filter opacity-15 dark:opacity-40 transition-opacity duration-300"
+          loading="lazy"
+          decoding="async"
         />
         {/* Gradients to blend sections */}
         <div className="absolute inset-0 bg-gradient-to-r from-bg-main via-bg-main/80 to-bg-main/20 md:bg-gradient-to-r md:from-bg-main md:via-bg-main/75 md:to-transparent" />

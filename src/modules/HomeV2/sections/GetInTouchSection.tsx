@@ -37,6 +37,8 @@ export default function GetInTouchSection() {
           src={imgContactBg}
           alt="Luxury Villa Night Scene"
           className="w-full h-full object-cover object-center filter opacity-20 dark:opacity-60 transition-opacity duration-300"
+          loading="lazy"
+          decoding="async"
         />
         {/* Responsive theme-friendly gradient overlays for highest text contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-bg-main via-bg-main/85 to-bg-main/30 md:bg-gradient-to-r md:from-bg-main md:via-bg-main/80 md:to-transparent" />

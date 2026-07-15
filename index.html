@@ -6,7 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://agsdemo.in" crossorigin />
+    <link rel="preload" href="https://agsdemo.in/macapi/public/assets/images/web_images/hero_bg.webp" as="image" fetchpriority="high" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+    <script type="speculationrules">
+    {
+      "prerender": [
+        {
+          "where": {
+            "href_matches": [
+              "/automation",
+              "/lighting",
+              "/networking",
+              "/security",
+              "/contact",
+              "/about",
+              "/why-us",
+              "/service",
+              "/blogs",
+              "/experience"
+            ]
+          },
+          "eagerness": "moderate"
+        }
+      ]
+    }
+    </script>
     <title>mkc-website</title>
   </head>
   <body>

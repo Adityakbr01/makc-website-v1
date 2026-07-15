@@ -1,6 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { Outlet, useLocation } from "react-router";
 import Footer from "../layouts/footer/Footer";
 import Header from "../layouts/navbar/Header";
@@ -29,7 +29,13 @@ export default function Layout() {
     <div className="min-h-screen bg-bg-main text-text-main transition-colors duration-300">
       <Header />
       <main>
-        <Outlet />
+        <Suspense fallback={
+          <div className="min-h-[60vh] flex items-center justify-center bg-bg-main">
+            <div className="w-8 h-8 border-2 border-gold-primary border-t-transparent rounded-full animate-spin" />
+          </div>
+        }>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
       <FloatingActionGroup />

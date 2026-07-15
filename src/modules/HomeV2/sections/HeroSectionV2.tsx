@@ -55,6 +55,9 @@ export default function HeroSectionV2() {
           src={heroBg}
           alt="Smart Home Automation Installation in Bangalore"
           className="w-full h-full object-cover object-center scale-105 transition-all duration-500 opacity-95 dark:opacity-85"
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
         />
         {/* Dynamic theme-aware gradients for premium readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-bg-main via-bg-main/40 to-transparent z-10" />

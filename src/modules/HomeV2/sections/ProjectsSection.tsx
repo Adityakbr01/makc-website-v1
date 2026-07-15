@@ -63,6 +63,8 @@ export default function ProjectsSection() {
                   src={project.image}
                   alt={project.name}
                   className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
                 
                 {/* Semi-transparent Dark overlay */}

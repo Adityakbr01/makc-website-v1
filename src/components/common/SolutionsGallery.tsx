@@ -81,6 +81,7 @@ export default function SolutionsGallery() {
                   alt={item.alt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   loading="lazy"
+                  decoding="async"
                 />
                 {/* Subtle dark ambient overlay on hover */}
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300" />

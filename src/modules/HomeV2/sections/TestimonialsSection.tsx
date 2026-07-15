@@ -123,6 +123,8 @@ export default function TestimonialsSection() {
             src={imgVillaNight}
             alt="Luxury Villa Night View"
             className="absolute inset-0 w-full h-full object-cover object-center z-0"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/30 z-0" />
           <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black/60 to-transparent z-0 hidden lg:block" />
@@ -161,6 +163,8 @@ export default function TestimonialsSection() {
                     src={testimonials[current].image}
                     alt={testimonials[current].author}
                     className="w-full h-full object-cover object-center"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 
