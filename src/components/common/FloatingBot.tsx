@@ -114,7 +114,7 @@ export default function FloatingBot() {
         className={`group relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-gradient-to-tr from-[#0a84ff] to-[#6366f1] !text-white shadow-lg shadow-indigo-500/20 transition-all duration-300 hover:scale-110 hover:shadow-indigo-500/40 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-[#061121] ${
           isBouncing ? "animate-[bounce_0.6s_ease-in-out_infinite]" : "animate-float"
         }`}
-        aria-label="Ask MKC Helper Bot"
+        aria-label="Ask Bot"
       >
         {/* Glow circle background */}
         <span className="absolute inset-0 -z-10 rounded-full bg-indigo-500/30 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

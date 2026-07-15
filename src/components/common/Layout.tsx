@@ -1,14 +1,69 @@
-import { Toaster } from "@/components/ui/sonner";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { useEffect, Suspense } from "react";
+import { lazy, useEffect, Suspense, useRef, useState } from "react";
 import { Outlet, useLocation } from "react-router";
-import Footer from "../layouts/footer/Footer";
 import Header from "../layouts/navbar/Header";
-import FloatingActionGroup from "./FloatingActionGroup";
+
+const Footer = lazy(() => import("../layouts/footer/Footer"));
+const FloatingActionGroup = lazy(() => import("./FloatingActionGroup"));
+const Toaster = lazy(() => import("@/components/ui/sonner").then((module) => ({ default: module.Toaster })));
+
+function FooterWhenVisible() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element || visible) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "900px 0px" },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [visible]);
+
+  return (
+    <div ref={ref} className={visible ? undefined : "min-h-[360px]"}>
+      {visible ? (
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
+      ) : null}
+    </div>
+  );
+}
+
+function FloatingActionsWhenIdle() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const show = () => setVisible(true);
+    const timer = window.setTimeout(show, 10000);
+    window.addEventListener("pointerdown", show, { once: true, passive: true });
+    window.addEventListener("keydown", show, { once: true });
+
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("pointerdown", show);
+      window.removeEventListener("keydown", show);
+    };
+  }, []);
+
+  return visible ? (
+    <Suspense fallback={null}>
+      <FloatingActionGroup />
+    </Suspense>
+  ) : null;
+}
 
 export default function Layout() {
   const location = useLocation();
-  useScrollReveal();
 
   useEffect(() => {
     if (location.hash) {
@@ -44,9 +99,13 @@ export default function Layout() {
           <Outlet />
         </Suspense>
       </main>
-      <Footer />
-      <FloatingActionGroup />
-      <Toaster />
+      <FooterWhenVisible />
+      <FloatingActionsWhenIdle />
+      {location.pathname !== "/" ? (
+        <Suspense fallback={null}>
+          <Toaster />
+        </Suspense>
+      ) : null}
     </div>
   );
 }

@@ -1,11 +1,4 @@
-import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 import { getImageUrl } from "@/utils/image";
-
-
-gsap.registerPlugin(ScrollTrigger);
 
 const columns = [
   // Column 1 (Left column in wireframe)
@@ -30,34 +23,8 @@ const columns = [
 ];
 
 export default function SolutionsGallery() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 80%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    tl.from(".gallery-title", {
-      y: 30,
-      autoAlpha: 0,
-      duration: 0.8,
-      ease: "power3.out"
-    })
-      .from(".gallery-col", {
-        y: 40,
-        autoAlpha: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "power3.out"
-      }, "-=0.55");
-  }, { scope: containerRef });
-
   return (
-    <section ref={containerRef} className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto no-reveal">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto no-reveal">
       
       {/* Title */}
       <h2 className="gallery-title text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-text-main text-center mb-16 font-sans">

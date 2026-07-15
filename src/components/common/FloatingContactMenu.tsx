@@ -51,7 +51,7 @@ export default function FloatingContactMenu() {
             ? "bg-bg-surface hover:bg-bg-main text-text-main shadow-black/10 dark:shadow-black/20 border border-border-main"
             : "bg-[#0a84ff] hover:bg-[#0070e0] !text-white shadow-[#0a84ff]/20"
         }`}
-        aria-label="Contact Options"
+        aria-label={isOpen ? "Close Contact Us" : "Contact Us"}
       >
         {/* Pulsing glow ring when closed */}
         {!isOpen && (

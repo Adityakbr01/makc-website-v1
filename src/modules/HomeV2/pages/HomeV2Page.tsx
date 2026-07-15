@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import useSEO from "@/hooks/useSEO";
 import HeroSectionV2 from "../sections/HeroSectionV2";
 import StatsSectionV2 from "../sections/StatsSectionV2";
@@ -11,6 +12,43 @@ const SolutionsGallery = lazy(() => import("@/components/common/SolutionsGallery
 const SmarterWaySection = lazy(() => import("../sections/SmarterWaySection"));
 const TestimonialsSection = lazy(() => import("../sections/TestimonialsSection"));
 const GetInTouchSection = lazy(() => import("../sections/GetInTouchSection"));
+
+function LazyOnView({
+  children,
+  minHeight = 520,
+}: {
+  children: ReactNode;
+  minHeight?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [shouldRender, setShouldRender] = useState(false);
+
+  useEffect(() => {
+    if (shouldRender) return;
+
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldRender(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "700px 0px" },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [shouldRender]);
+
+  return (
+    <div ref={ref} style={shouldRender ? undefined : { minHeight }}>
+      {shouldRender ? <Suspense fallback={null}>{children}</Suspense> : null}
+    </div>
+  );
+}
 
 export default function HomeV2Page() {
   useSEO({
@@ -29,28 +67,33 @@ export default function HomeV2Page() {
       {/* V2 Stats Section */}
       <StatsSectionV2 />
 
-      <Suspense fallback={null}>
-        {/* V2 Services Section */}
+      <LazyOnView minHeight={720}>
         <ServicesSectionV2 />
+      </LazyOnView>
 
-        {/* V2 Featured Projects Section */}
+      <LazyOnView minHeight={360}>
         <ProjectsSection />
+      </LazyOnView>
 
-        {/* V2 Partner Logos Section */}
+      <LazyOnView minHeight={260}>
         <PartnerLogosSection />
+      </LazyOnView>
 
-        {/* Solutions Gallery Showcase */}
+      <LazyOnView minHeight={520}>
         <SolutionsGallery />
+      </LazyOnView>
 
-        {/* V2 Smarter Way Section */}
+      <LazyOnView minHeight={760}>
         <SmarterWaySection />
+      </LazyOnView>
 
-        {/* V2 Testimonials Section */}
+      <LazyOnView minHeight={640}>
         <TestimonialsSection />
+      </LazyOnView>
 
-        {/* V2 Get In Touch Section */}
+      <LazyOnView minHeight={640}>
         <GetInTouchSection />
-      </Suspense>
+      </LazyOnView>
     </div>
   );
 }
