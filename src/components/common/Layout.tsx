@@ -27,8 +27,15 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-bg-main text-text-main transition-colors duration-300">
+      {/* Skip to Content Link for Keyboard Accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-bg-surface focus:text-accent-blue focus:px-4 focus:py-2 focus:border focus:border-border-main focus:rounded-md focus:shadow-lg"
+      >
+        Skip to main content
+      </a>
       <Header />
-      <main>
+      <main id="main-content">
         <Suspense fallback={
           <div className="min-h-[60vh] flex items-center justify-center bg-bg-main">
             <div className="w-8 h-8 border-2 border-gold-primary border-t-transparent rounded-full animate-spin" />

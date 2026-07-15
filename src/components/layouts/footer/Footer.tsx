@@ -292,6 +292,7 @@ export default function Footer() {
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="flex h-9 w-9 items-center justify-center border border-border-main text-text-main hover:bg-bg-surface hover:text-accent-blue transition-all duration-300 rounded-none shrink-0 cursor-pointer"
               title="Toggle Theme"
+              aria-label="Toggle Theme"
             >
               {mounted && theme === "dark" ? (
                 <Sun className="h-5.5 w-5.5" />
