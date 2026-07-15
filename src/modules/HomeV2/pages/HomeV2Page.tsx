@@ -1,14 +1,16 @@
+import { lazy, Suspense } from "react";
 import useSEO from "@/hooks/useSEO";
 import HeroSectionV2 from "../sections/HeroSectionV2";
 import StatsSectionV2 from "../sections/StatsSectionV2";
-import ServicesSectionV2 from "../sections/ServicesSectionV2";
-import ProjectsSection from "../sections/ProjectsSection";
-import PartnerLogosSection from "../sections/PartnerLogosSection";
-// import ClientTestimonialsSection from "../sections/ClientTestimonialsSection";
-import TestimonialsSection from "../sections/TestimonialsSection";
-import SmarterWaySection from "../sections/SmarterWaySection";
-import GetInTouchSection from "../sections/GetInTouchSection";
-import SolutionsGallery from "@/components/common/SolutionsGallery";
+
+// Lazy load below-the-fold sections to shrink the initial page load JS payload
+const ServicesSectionV2 = lazy(() => import("../sections/ServicesSectionV2"));
+const ProjectsSection = lazy(() => import("../sections/ProjectsSection"));
+const PartnerLogosSection = lazy(() => import("../sections/PartnerLogosSection"));
+const SolutionsGallery = lazy(() => import("@/components/common/SolutionsGallery"));
+const SmarterWaySection = lazy(() => import("../sections/SmarterWaySection"));
+const TestimonialsSection = lazy(() => import("../sections/TestimonialsSection"));
+const GetInTouchSection = lazy(() => import("../sections/GetInTouchSection"));
 
 export default function HomeV2Page() {
   useSEO({
@@ -27,32 +29,28 @@ export default function HomeV2Page() {
       {/* V2 Stats Section */}
       <StatsSectionV2 />
 
-      {/* V2 Services Section */}
-      <ServicesSectionV2 />
+      <Suspense fallback={null}>
+        {/* V2 Services Section */}
+        <ServicesSectionV2 />
 
-      {/* V2 Featured Projects Section */}
-      <ProjectsSection />
+        {/* V2 Featured Projects Section */}
+        <ProjectsSection />
 
-      {/* V2 Partner Logos Section */}
-      <PartnerLogosSection />
+        {/* V2 Partner Logos Section */}
+        <PartnerLogosSection />
 
-      {/* Solutions Gallery Showcase */}
-      <SolutionsGallery />
+        {/* Solutions Gallery Showcase */}
+        <SolutionsGallery />
 
-      {/* V2 Smarter Way Section */}
-      <SmarterWaySection />
+        {/* V2 Smarter Way Section */}
+        <SmarterWaySection />
 
-      {/* V2 Client Testimonials Grid Section */}
-      {/* <ClientTestimonialsSection /> */}
+        {/* V2 Testimonials Section */}
+        <TestimonialsSection />
 
-      {/* V2 Testimonials Section */}
-      <TestimonialsSection />
-
-      {/* V2 Get In Touch Section */}
-      <GetInTouchSection />
-
-      {/* V2 Call To Action Banner Section */}
-      {/* <CtaSection /> */}
+        {/* V2 Get In Touch Section */}
+        <GetInTouchSection />
+      </Suspense>
     </div>
   );
 }
