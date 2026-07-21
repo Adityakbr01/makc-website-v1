@@ -79,8 +79,11 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <ContactInfoChips />
-          <SocialMediaBar />
+          {/* 4-card row — all chips + social in one flex nowrap row */}
+          <div className="lg:col-span-12 flex flex-row flex-nowrap gap-4 lg:gap-6">
+            <ContactInfoChips />
+            <SocialMediaBar />
+          </div>
         </div>
 
         <LocationMap />

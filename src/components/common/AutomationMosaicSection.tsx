@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { getImageUrl } from "@/utils/image";
+import YoutubeEmbed from "@/components/common/YoutubeEmbed";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,22 +55,26 @@ export default function AutomationMosaicSection({
         );
         
         if (serviceData) {
+          // Find base url for Reels/Images
+          const reelsBase = json.image_url?.find(
+            (img: any) => img.image_for === "Reels"
+          )?.image_url || "https://agsdemo.in/macapi/public/assets/images/reels_images/";
+          
+          // Check if the path is a full URL, else prepend base URL
+          const isFullUrl = serviceData.services_url_image.startsWith("http");
+          const finalUrl = isFullUrl 
+            ? serviceData.services_url_image 
+            : `${reelsBase}${serviceData.services_url_image}`;
+
           if (serviceData.services_type === "Reel") {
             setMediaData({
               type: "Reel",
-              url: serviceData.services_url_image,
+              url: finalUrl,
             });
           } else {
-            // Find base image url for Reels
-            const reelsBase = json.image_url?.find(
-              (img: any) => img.image_for === "Reels"
-            )?.image_url || "https://agsdemo.in/macapi/public/assets/images/reels_images/";
-            
-            // If the image path is a URL, use it, else concatenate with base URL
-            const isFullUrl = serviceData.services_url_image.startsWith("http");
             setMediaData({
               type: "Image",
-              url: isFullUrl ? serviceData.services_url_image : `${reelsBase}${serviceData.services_url_image}`,
+              url: finalUrl,
             });
           }
         } else {
@@ -209,18 +214,63 @@ export default function AutomationMosaicSection({
                 </div>
               ) : mediaData?.type === "Reel" ? (
                 (() => {
-                  const match = mediaData.url.match(/\/reel\/([a-zA-Z0-9_-]+)/) || mediaData.url.match(/\/p\/([a-zA-Z0-9_-]+)/);
-                  const id = match ? match[1] : "DTp5xiDj82a";
-                  return (
-                    <iframe
-                      src={`https://www.instagram.com/reel/${id}/embed`}
-                      className="absolute w-full h-[calc(100%+120px)] -top-[60px] left-0 lg:w-[150%] lg:h-[150%] lg:-top-[25%] lg:-left-[25%] border-0"
-                      allowFullScreen
-                      scrolling="no"
-                      allow="encrypted-media"
-                      title={`${title} Video Demonstration`}
-                    />
-                  );
+                  const isInstagram = mediaData.url.includes("instagram.com");
+                  const isYoutube = mediaData.url.includes("youtube.com") || mediaData.url.includes("youtu.be");
+                  
+                  if (isInstagram) {
+                    const match = mediaData.url.match(/\/reel\/([a-zA-Z0-9_\-]+)/) || mediaData.url.match(/\/p\/([a-zA-Z0-9_\-]+)/);
+                    const id = match ? match[1] : "DTp5xiDj82a";
+                    let searchParams = "";
+                    try {
+                      const urlObj = new URL(mediaData.url);
+                      searchParams = urlObj.search;
+                    } catch (e) {
+                      const qIdx = mediaData.url.indexOf("?");
+                      if (qIdx !== -1) {
+                        searchParams = mediaData.url.substring(qIdx);
+                      }
+                    }
+                    return (
+                      <iframe
+                        src={`https://www.instagram.com/reel/${id}/embed/${searchParams}`}
+                        className="absolute w-full h-[calc(100%+120px)] -top-[60px] left-0 lg:w-[150%] lg:h-[150%] lg:-top-[25%] lg:-left-[25%] border-0"
+                        allowFullScreen
+                        scrolling="no"
+                        allow="encrypted-media"
+                        title={`${title} Video Demonstration`}
+                        sandbox="allow-scripts allow-same-origin allow-presentation"
+                      />
+                    );
+                  } else if (isYoutube) {
+                    const shortsMatch = mediaData.url.match(/\/shorts\/([a-zA-Z0-9_\-]+)/);
+                    const watchMatch = mediaData.url.match(/v=([a-zA-Z0-9_\-]+)/);
+                    const embedMatch = mediaData.url.match(/\/embed\/([a-zA-Z0-9_\-]+)/);
+                    const shareMatch = mediaData.url.match(/youtu\.be\/([a-zA-Z0-9_\-]+)/);
+                    
+                    let id = "";
+                    if (shortsMatch) id = shortsMatch[1];
+                    else if (watchMatch) id = watchMatch[1];
+                    else if (embedMatch) id = embedMatch[1];
+                    else if (shareMatch) id = shareMatch[1];
+                    
+                    return (
+                      <YoutubeEmbed
+                        videoId={id}
+                        title={`${title} Video Demonstration`}
+                      />
+                    );
+                  } else {
+                    return (
+                      <video
+                        src={mediaData.url}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                      />
+                    );
+                  }
                 })()
               ) : (
                 <img
