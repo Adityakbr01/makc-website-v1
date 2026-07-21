@@ -131,19 +131,21 @@ export default function HeroSectionV3() {
 
               return (
                 <div key={hotspot.id}>
-                  {/* Anchor Dot */}
-                  <Hotspot
-                    id={hotspot.id}
-                    anchor={hotspot.anchor}
-                    isHovered={false}
-                    isActive={isActive}
-                    onHoverStart={() => {}}
-                    onHoverEnd={() => {}}
-                    onClick={() => handleHotspotClick(hotspot.id)}
-                    index={idx}
-                    delay={delay}
-                    isMobile={isMobile}
-                  />
+                  {/* Anchor Dot — hidden on mobile */}
+                  {!isMobile && (
+                    <Hotspot
+                      id={hotspot.id}
+                      anchor={hotspot.anchor}
+                      isHovered={false}
+                      isActive={isActive}
+                      onHoverStart={() => {}}
+                      onHoverEnd={() => {}}
+                      onClick={() => handleHotspotClick(hotspot.id)}
+                      index={idx}
+                      delay={delay}
+                      isMobile={isMobile}
+                    />
+                  )}
 
                   {/* Floating Labels (Hidden on Mobile) */}
                   {!isMobile && (
