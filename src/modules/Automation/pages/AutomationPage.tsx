@@ -172,10 +172,10 @@ export default function AutomationPage() {
                 With almost a decade of experience and 700+ projects delivered
                 across homes and select commercial spaces, here's what you can
                 expect from us.
-                <img
+                  <img
                   src={getImageUrl("star.webp")}
-                  alt=""
-                  aria-hidden="true"
+                  alt="Five-star rating icon representing premium home automation services"
+                  title="5 Star Home Automation Quality"
                   className="w-6 h-6 inline-block ml-2 mb-1 select-none"
                 />
               </p>
@@ -290,6 +290,7 @@ export default function AutomationPage() {
               <img
                 src={serviceLightingImg}
                 alt="Personalized smart lighting atmosphere"
+                title="Personalized Smart Lighting"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
@@ -458,9 +459,10 @@ export default function AutomationPage() {
            
             <div className="flex flex-col gap-4">
               <div className="relative rounded-2xl overflow-hidden aspect-[16/9] group">
-                <img
+                  <img
                   src={whyChooseUsImg}
-                  alt="Smart home switch panel blending seamlessly into a modern interior"
+                  alt="Smart switches and panels setup"
+                  title="Home Automation Control Panel"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
@@ -565,6 +567,7 @@ export default function AutomationPage() {
                 <img
                   src={projectVillasImg}
                   alt="Smart luxury villa exterior"
+                  title="Luxury Smart Villa Exterior"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/75 to-black/60" />

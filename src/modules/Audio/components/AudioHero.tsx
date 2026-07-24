@@ -56,11 +56,12 @@ export default function AudioHero() {
           <div className="hero-subtitle max-w-2xl">
             <p className="text-base sm:text-lg text-white/80 leading-relaxed">
               Smart audio isn't just about playing music — it's about creating the perfect acoustic ambiance, distributing high-fidelity sound throughout your home, and making controls effortless. With professionally designed smart audio solutions in Bangalore, MAKc Automation helps you control every sound zone with ease.
-              <img
-                src={getImageUrl("star.webp")}
-                alt=""
-                aria-hidden="true"
-                className="w-6 h-6 inline-block ml-2 mb-1 select-none"
+                <img
+                 src={getImageUrl("star.webp")}
+                 alt="Five-star rating icon representing premium home theatre and automation solutions"
+                 title="5 Star Home Theatre Solutions"
+                 aria-hidden="true"
+                 className="w-6 h-6 inline-block ml-2 mb-1 select-none"
               />
             </p>
           </div>

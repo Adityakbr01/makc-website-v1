@@ -63,11 +63,12 @@ export default function NetworkingHero() {
               Automation ensures strong, secure, and uninterrupted connectivity
               across every corner of your space. Designed for homes, villas,
               apartments, offices, and commercial spaces.
-              <img
-                src={getImageUrl("star.webp")}
-                alt=""
-                aria-hidden="true"
-                className="w-6 h-6 inline-block ml-2 mb-1 select-none"
+                <img
+                 src={getImageUrl("star.webp")}
+                 alt="Five-star rating icon representing premium networking and automation services"
+                 title="5 Star Networking Solutions"
+                 aria-hidden="true"
+                 className="w-6 h-6 inline-block ml-2 mb-1 select-none"
               />
             </p>
           </div>

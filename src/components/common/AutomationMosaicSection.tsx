@@ -21,6 +21,7 @@ const VIDEO_MAP: Record<string, string> = {
 interface AutomationMosaicImage {
   src: string;
   alt?: string;
+  title?: string;
 }
 
 interface AutomationMosaicSectionProps {
@@ -250,6 +251,7 @@ export default function AutomationMosaicSection({
                 <img
                   src={mediaData?.url || getImageUrl(images[0]?.src || "")}
                   alt={images[0]?.alt || `${title} demonstration`}
+                  title={images[0]?.title || images[0]?.alt || `${title} demonstration`}
                   className="w-full h-full object-cover transition-transform duration-750 hover:scale-[1.04]"
                 />
               )}
@@ -262,6 +264,7 @@ export default function AutomationMosaicSection({
             <img
               src={getImageUrl(images[1]?.src || "")}
               alt={images[1]?.alt || `${title} secondary view`}
+              title={images[1]?.title || images[1]?.alt || `${title} secondary view`}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
@@ -272,6 +275,7 @@ export default function AutomationMosaicSection({
             <img
               src={getImageUrl(images[2]?.src || "")}
               alt={images[2]?.alt || `${title} tertiary view`}
+              title={images[2]?.title || images[2]?.alt || `${title} tertiary view`}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />

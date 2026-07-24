@@ -64,11 +64,12 @@ export default function LightingHero() {
               making everyday living effortless. With professionally designed
               smart lighting automation in Bangalore, MAKc Automation helps you
               control every light in your space with ease.
-              <img
-                src={getImageUrl("star.webp")}
-                alt=""
-                aria-hidden="true"
-                className="w-6 h-6 inline-block ml-2 mb-1 select-none"
+                <img
+                 src={getImageUrl("star.webp")}
+                 alt="Five-star rating icon representing premium smart lighting solutions"
+                 title="5 Star Smart Lighting Quality"
+                 aria-hidden="true"
+                 className="w-6 h-6 inline-block ml-2 mb-1 select-none"
               />
             </p>
           </div>
